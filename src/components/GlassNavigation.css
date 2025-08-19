@@ -1,0 +1,164 @@
+.glass-nav-container {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: auto;
+}
+
+.glass-nav-bottom {
+  bottom: 20px;
+}
+
+.glass-nav-top {
+  top: 20px; /* Centralizado com os botões do header */
+}
+
+.glass-nav-surface {
+  width: auto !important;
+  height: 66px !important;
+}
+
+.glass-nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  gap: 15px;
+}
+
+.glass-nav-items {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.glass-nav-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px 15px;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 65px;
+  position: relative;
+}
+
+.glass-nav-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.glass-nav-button-active {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--accent-color);
+}
+
+.glass-nav-button-active::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--accent-color);
+  border-radius: 1px;
+}
+
+.glass-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-nav-text {
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1;
+}
+
+.glass-nav-profile {
+  display: flex;
+  align-items: center;
+}
+
+.glass-profile-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px 15px;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 65px;
+  position: relative;
+}
+
+.glass-profile-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .glass-nav-bottom {
+    bottom: 10px;
+  }
+  
+  .glass-nav-top {
+    top: 15px;
+  }
+  
+  .glass-nav-content {
+    padding: 0 15px;
+    gap: 12px;
+  }
+  
+  .glass-nav-items {
+    gap: 12px;
+  }
+  
+  .glass-nav-button,
+  .glass-profile-button {
+    min-width: 55px;
+    padding: 8px 12px;
+  }
+  
+  .glass-nav-text {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-nav-content {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  
+  .glass-nav-items {
+    gap: 8px;
+  }
+  
+  .glass-nav-button,
+  .glass-profile-button {
+    min-width: 50px;
+    padding: 6px 10px;
+  }
+  
+  .glass-nav-text {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,533 @@
+/* Container principal do Spline Home */
+.spline-home-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background fixo com Spline */
+.spline-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  background: var(--color-background);
+  pointer-events: auto;
+}
+
+.spline-background canvas {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* Debug styles */
+.spline-container-debug {
+  /* border: 2px solid red !important; */
+  /* background: rgba(255, 0, 0, 0.1) !important; */
+}
+
+.spline-container-debug canvas {
+  /* border: 2px solid blue !important; */
+}
+
+/* Estados de loading e error */
+.spline-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--color-text-primary);
+  z-index: 10;
+}
+
+.spline-loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--color-border);
+  border-top: 3px solid var(--color-accent1);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spline-loading p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0 0 1rem 0;
+}
+
+.spline-loading-progress {
+  width: 200px;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.spline-loading-bar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent1), var(--color-accent2));
+  border-radius: 2px;
+  animation: loadingProgress 2s ease-in-out infinite;
+  transform: translateX(-100%);
+}
+
+@keyframes loadingProgress {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+.spline-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--color-text-primary);
+  z-index: 10;
+  background: rgba(15, 15, 26, 0.9);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(20px);
+  max-width: 400px;
+  width: 90%;
+}
+
+.spline-error-content h3 {
+  color: var(--color-alert);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.spline-error-content p {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.spline-retry-button {
+  background: var(--gradient-button-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.spline-retry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+/* Conteúdo que rola sobre o Spline */
+.spline-scroll-content {
+  position: relative;
+  z-index: 10;
+  background: transparent;
+  pointer-events: none; /* Permite que eventos passem para o Spline */
+}
+
+/* Seção Hero - Apenas Spline */
+.spline-hero-section {
+  min-height: 100vh;
+  background: transparent;
+  position: relative;
+  pointer-events: none;
+}
+
+/* Seção para trigger do scroll */
+.scroll-trigger-section {
+  min-height: 60vh;
+  background: transparent;
+  position: relative;
+  pointer-events: none;
+}
+
+/* Seção Principal - Aparece no scroll */
+.spline-main-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 4, 6, 0.3) 0%,
+    rgba(4, 4, 6, 0.6) 50%,
+    rgba(4, 4, 6, 0.8) 100%
+  );
+}
+
+.spline-main-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(15, 15, 26, 0.9);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  pointer-events: auto; /* Reativa interação para este elemento */
+}
+
+.spline-main-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--color-accent1), var(--color-accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.spline-main-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.spline-button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Nova seção com widget de vidro */
+.glass-widget-section {
+  position: relative; /* Alterado para fluxo de documento normal */
+  width: 100%;
+  height: 22.5vh;
+  z-index: 5;
+  pointer-events: none;
+  /* A seção .scroll-trigger-section agora fornece o espaçamento */
+}
+
+.glass-widget-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.glass-widget-main {
+  width: 90%;
+  max-width: 1200px;
+  min-height: 180px;
+  background: rgba(15, 15, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 -10px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  pointer-events: auto;
+  position: relative;
+  overflow: hidden;
+  /* A visibilidade e animação agora são controladas via GSAP */
+}
+
+.glass-widget-initial {
+  padding: 3rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.glass-widget-title {
+  flex: 0 0 auto;
+  min-width: 300px;
+}
+
+.glass-widget-title h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+  background: linear-gradient(135deg, var(--color-accent1), var(--color-accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-widget-text-preview {
+  flex: 1;
+}
+
+.glass-widget-text-preview p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.glass-widget-expanded {
+  padding: 0 2.5rem 3rem 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.glass-widget-expanded.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glass-widget-full-text {
+  margin-bottom: 3rem;
+}
+
+.glass-widget-full-text p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.overlay-widgets-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.overlay-widget {
+  background: #2A2A35; /* Cinza mais escuro e opaco */
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  
+  /* Animação de slide up */
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.overlay-widget.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.scribo-widget {
+  animation-delay: 0.2s;
+}
+
+.calculadora-widget {
+  animation-delay: 0.4s;
+}
+
+/* Responsividade para o novo widget de vidro */
+@media (max-width: 768px) {
+  .glass-widget-section {
+    height: 30vh;
+  }
+  
+  .glass-widget-main {
+    min-height: 180px;
+  }
+  
+  .glass-widget-initial {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .glass-widget-expanded {
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+  
+  .glass-widget-title {
+    min-width: auto;
+  }
+  
+  .glass-widget-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .overlay-widgets-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .glass-widget-container {
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+
+.spline-widget {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.spline-widget.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Seção CTA final */
+.spline-cta-section {
+  padding: 2.1rem 2rem 6rem 2rem;
+  background: var(--color-background);
+  text-align: center;
+  pointer-events: auto; /* Reativa interação para botões CTA */
+}
+
+.spline-cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.spline-cta-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--color-accent1), var(--color-accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.spline-cta-text {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.spline-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.spline-cta-button {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  min-width: 200px;
+}
+
+/* Badge adicional para widgets */
+.badge-purple {
+  background: linear-gradient(135deg, var(--color-accent1), #A855F7);
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .spline-hero-content,
+  .spline-why-content {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .spline-button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spline-widgets-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .spline-hero-section,
+  .spline-why-section {
+    padding: 2rem 1rem;
+  }
+
+  .spline-additional-content {
+    padding: 2rem 1rem;
+  }
+
+  .spline-cta-section {
+    padding: 4rem 1rem;
+  }
+
+  .spline-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spline-cta-button {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .spline-main-title {
+    font-size: 2rem;
+  }
+
+  .spline-main-subtitle {
+    font-size: 1rem;
+  }
+
+  .spline-section-title {
+    font-size: 1.8rem;
+  }
+
+  .spline-section-text {
+    font-size: 1rem;
+  }
+
+  .spline-hero-content,
+  .spline-why-content {
+    padding: 1rem;
+  }
+}
+
+/* Otimizações de performance */
+.spline-background,
+.spline-scroll-content {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Animações suaves para scroll */
+@media (prefers-reduced-motion: no-preference) {
+  .spline-background {
+    transition: transform 0.1s ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spline-background {
+    transform: none !important;
+  }
+  
+  .spline-widget {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

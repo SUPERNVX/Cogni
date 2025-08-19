@@ -1,0 +1,20 @@
+.glass-surface {
+  /* Usando o estilo do tema escuro como padrão, que é mais performático */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(1.8) brightness(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.8) brightness(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+  border-radius: inherit; /* Herda o border-radius do elemento pai */
+}
+
+/* Fallback para navegadores que não suportam o backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .glass-surface {
+    /* Um fundo sólido semi-transparente como alternativa */
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
