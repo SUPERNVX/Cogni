@@ -1,4 +1,4 @@
-import { Home, NotebookPen, Brain, SquareGanttChart, Mail, CircleUserRound } from 'lucide-react';
+import { Home, NotebookPen, Brain, SquareGanttChart, Mail } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import GlassSurface from './GlassSurface';
 import './GlassNavigation.css';
@@ -41,14 +41,6 @@ const GlassNavigation = ({ position = 'bottom' }) => {
                 <span className="glass-nav-text">{item.name}</span>
               </NavLink>
             ))}
-          </div>
-          <div className="glass-nav-profile">
-            <button className="glass-profile-button">
-              <div className="glass-nav-icon">
-                <CircleUserRound size={22} />
-              </div>
-              <span className="glass-nav-text">Perfil</span>
-            </button>
           </div>
         </div>
       </GlassSurface>

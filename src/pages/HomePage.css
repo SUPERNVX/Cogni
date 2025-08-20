@@ -9,13 +9,16 @@
 /* Background fixo com Spline */
 .spline-background {
   position: fixed;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 100px);
   z-index: 0;
   background: var(--color-background);
   pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .spline-background canvas {
