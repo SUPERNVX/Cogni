@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { Mail, MessageCircle, Clock, HelpCircle, Send, Phone, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
 
+// Estado global para controlar se já animou na primeira visita
+let hasContactAnimated = false;
+
 // Componente para cards com efeitos
 const ContactCard = ({ children, className = "", delay = 0, size = "normal" }) => {
   const cardRef = useRef(null);
@@ -10,22 +13,52 @@ const ContactCard = ({ children, className = "", delay = 0, size = "normal" }) =
     const card = cardRef.current;
     if (!card) return;
 
-    // Animação de entrada
-    gsap.fromTo(card, 
-      { 
-        opacity: 0, 
-        y: 50,
-        scale: 0.95
-      },
-      { 
+    // Se já animou antes, mostrar diretamente
+    if (hasContactAnimated) {
+      gsap.set(card, { 
         opacity: 1, 
         y: 0,
-        scale: 1,
-        duration: 0.8,
-        delay: delay,
-        ease: "power3.out"
-      }
+        visibility: "visible"
+      });
+      return;
+    }
+
+    // Inicializar elemento invisível para primeira animação
+    gsap.set(card, { 
+      opacity: 0, 
+      y: 30, // Slide sutil de baixo para cima
+      visibility: "visible"
+    });
+
+    // Intersection Observer com threshold maior para aparecer mais cedo
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Marcar que já animou
+            hasContactAnimated = true;
+            
+            // Animação de fade in com slide sutil
+            gsap.to(card, {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              delay: delay,
+              ease: "power2.out"
+            });
+            
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 } // Threshold maior para aparecer mais cedo
     );
+
+    observer.observe(card);
+
+    return () => {
+      observer.disconnect();
+    };
 
     // Efeitos de hover suavizados
     const handleMouseEnter = () => {
@@ -153,31 +186,30 @@ const ContactPage = () => {
             </p>
             
             <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="name" className="form-label">Nome</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="form-input"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email" className="form-label">E-mail</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="form-input"
-                    required
-                  />
-                </div>
+              <div className="form-group">
+                <label htmlFor="name" className="form-label">Nome</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="form-input"
+                  required
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="form-input"
+                  required
+                />
               </div>
               
               <div className="form-group">

@@ -8,7 +8,6 @@ const GlassNavigation = ({ position = 'bottom' }) => {
     { name: 'Home', path: '/', icon: <Home size={22} /> },
     { name: 'Sobre', path: '/about', icon: <Brain size={22} /> },
     { name: 'Projetos', path: '/projects', icon: <SquareGanttChart size={22} /> },
-    { name: 'Blog', path: '/blog', icon: <NotebookPen size={22} /> },
     { name: 'Contato', path: '/contact', icon: <Mail size={22} /> },
   ];
 
@@ -20,8 +19,13 @@ const GlassNavigation = ({ position = 'bottom' }) => {
         borderRadius={20}
         backgroundOpacity={0}
         brightness={40}
-        opacity={0.8}
-        blur={8}
+        opacity={0.6}
+        blur={11}
+        displace={2}
+        distortionScale={0}
+        redOffset={0}
+        greenOffset={0}
+        blueOffset={0}
         saturation={1.2}
         className="glass-nav-surface"
       >

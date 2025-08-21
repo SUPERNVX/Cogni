@@ -1,23 +1,24 @@
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { Routes, Route, useLocation, Outlet } from 'react-router-dom';
-import { Brain } from 'lucide-react';
+import cogniLogo from './assets/Cogni.png'; // Importando o novo logo
 
 import './style.css';
 
-// Importação de componentes e páginas
+// Importação de componentes
 import GlassNavigation from './components/GlassNavigation';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import ProjectsPage from './pages/ProjectsPage';
-import BlogPage from './pages/BlogPage';
-import ContactPage from './pages/ContactPage';
 
-// Componente de Header reutilizável
+// Importação dinâmica (Lazy Loading) das páginas
+const HomePage = lazy(() => import('./pages/HomePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+
+// Componente de Header reutilizável - ATUALIZADO
 const Header = () => (
   <div className="header-container">
     <div className="header-right-content">
       <div className="logo-container">
-        <Brain size={32} className="logo-icon" />
+        <img src={cogniLogo} alt="Cogni IA Logo" className="logo-image" />
         <span className="logo-text">Cogni IA</span>
       </div>
     </div>
@@ -52,22 +53,35 @@ const AppLayout = () => {
   );
 };
 
-// Componente principal da aplicação
+// Componente principal da aplicação - ATUALIZADO
 const App = () => {
-  // O efeito para carregar fontes foi movido para o index.html para melhor performance
+  const loadingFallback = (
+    <div style={{ 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      width: '100vw', 
+      height: '100vh', 
+      background: 'var(--color-background)',
+      color: 'var(--color-text-primary)' 
+    }}>
+      <p>Carregando...</p>
+    </div>
+  );
 
   return (
-    <Routes>
-      <Route element={<AppLayout />}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        {/* Rota de fallback para a home */}
-        <Route path="*" element={<HomePage />} />
-      </Route>
-    </Routes>
+    <Suspense fallback={loadingFallback}>
+      <Routes>
+        <Route element={<AppLayout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          {/* Rota de fallback para a home */}
+          <Route path="*" element={<HomePage />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 };
 

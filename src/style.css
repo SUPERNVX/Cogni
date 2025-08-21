@@ -149,6 +149,16 @@ body {
     color: var(--color-accent1);
 }
 
+.logo-image {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover .logo-image {
+  transform: scale(1.1) rotate(-5deg);
+}
+
 .logo-text {
     font-size: 1.125rem;
     font-weight: 600;
@@ -755,7 +765,8 @@ body {
     transition: transform 0.6s ease;
 }
 
-.about-card:hover .card-icon {
+.about-card:hover .card-icon,
+.contact-card:hover .card-icon {
     transform: scale(1.1) rotate(5deg);
 }
 
@@ -1032,6 +1043,7 @@ body {
     -webkit-backdrop-filter: blur(20px);
     transition: all 0.6s ease;
     cursor: pointer;
+    visibility: hidden; /* Iniciar invisível para evitar flash */
 }
 
 .contact-card:hover {
@@ -1066,10 +1078,14 @@ body {
 }
 
 .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
 }
 
 .form-group {
@@ -1094,6 +1110,7 @@ body {
     font-size: 0.9rem;
     transition: all 0.6s ease;
     resize: vertical;
+    box-sizing: border-box;
 }
 
 .form-input:focus {
@@ -1305,8 +1322,12 @@ body {
     }
     
     .form-row {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 0.5rem;
+    }
+    
+    .form-row .form-group {
+        margin-bottom: 1rem;
     }
 }
 
@@ -1320,7 +1341,11 @@ body {
     }
     
     .form-row {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    
+    .form-row .form-group {
+        margin-bottom: 1rem;
     }
     
     .contact-submit-btn {

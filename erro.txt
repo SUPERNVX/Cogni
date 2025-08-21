@@ -1,0 +1,39 @@
+[plugin:vite:react-babel] C:\Users\Nicolas\cogni-ia-site\src\components\MagicBento.jsx: Missing semicolon. (360:2)
+  363 |   gridRef,
+C:/Users/Nicolas/cogni-ia-site/src/components/MagicBento.jsx:360:2
+373 |      if (disableAnimations || !gridRef?.current || !enabled) return;
+374 |  
+375 |      const spotlight = document.createElement("div");
+    |                ^
+376 |      spotlight.className = "global-spotlight";
+377 |      spotlight.style.cssText = `
+    at constructor (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:367:19)
+    at JSXParserMixin.raise (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:6627:19)
+    at JSXParserMixin.semicolon (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:6923:10)
+    at JSXParserMixin.parseVarStatement (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:13231:10)
+    at JSXParserMixin.parseStatementContent (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:12851:23)
+    at JSXParserMixin.parseStatementLike (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:12767:17)
+    at JSXParserMixin.parseModuleItem (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:12744:17)
+    at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:13316:36)
+    at JSXParserMixin.parseBlockBody (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:13309:10)
+    at JSXParserMixin.parseProgram (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:12625:10)
+    at JSXParserMixin.parseTopLevel (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:12615:25)
+    at JSXParserMixin.parse (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:14492:10)
+    at parse (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\parser\lib\index.js:14526:38)
+    at parser (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\core\lib\parser\index.js:41:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+    at normalizeFile.next (<anonymous>)
+    at run (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\core\lib\transformation\index.js:22:50)
+    at run.next (<anonymous>)
+    at transform (C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\core\lib\transform.js:22:33)
+    at transform.next (<anonymous>)
+    at step (C:\Users\Nicolas\cogni-ia-site\node_modules\gensync\index.js:261:32)
+    at C:\Users\Nicolas\cogni-ia-site\node_modules\gensync\index.js:273:13
+    at async.call.result.err.err (C:\Users\Nicolas\cogni-ia-site\node_modules\gensync\index.js:223:11)
+    at C:\Users\Nicolas\cogni-ia-site\node_modules\gensync\index.js:189:28
+    at C:\Users\Nicolas\cogni-ia-site\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+    at C:\Users\Nicolas\cogni-ia-site\node_modules\gensync\index.js:113:33
+    at step (C:\Users\Nicolas\cogni-ia-site\node_modules\gensync\index.js:287:14)
+    at C:\Users\Nicolas\cogni-ia-site\node_modules\gensync\index.js:273:13
+    at async.call.result.err.err (C:\Users\Nicolas\cogni-ia-site\node_modules\gensync\index.js:223:11)
