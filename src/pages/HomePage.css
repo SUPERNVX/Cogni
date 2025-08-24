@@ -251,6 +251,7 @@
   pointer-events: auto;
   position: relative;
   overflow: hidden;
+  margin: 0 auto; /* Centraliza o widget */
   /* A visibilidade e animação agora são controladas via GSAP */
 }
 
@@ -353,12 +354,15 @@
   
   .glass-widget-main {
     min-height: 180px;
+    width: 95%; /* Aumenta a largura no mobile */
+    margin: 0 auto; /* Garante centralização */
   }
   
   .glass-widget-initial {
     flex-direction: column;
     gap: 1.5rem;
     padding: 2rem 1.5rem;
+    text-align: center; /* Centraliza o texto */
   }
   
   .glass-widget-expanded {
@@ -376,10 +380,28 @@
   .overlay-widgets-container {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0 0.5rem; /* Adiciona padding interno */
+  }
+  
+  .overlay-widget {
+    margin: 0 auto; /* Centraliza cada widget */
+    max-width: 100%; /* Garante que não ultrapasse o container */
   }
   
   .glass-widget-container {
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 0.5rem 1rem 0.5rem; /* Reduz padding lateral */
+    justify-content: center; /* Força centralização */
+  }
+  
+  /* Ajustes específicos para o Spline no mobile */
+  .spline-background {
+    transform: scale(0.8); /* Zoom out no Spline para mobile */
+    transform-origin: center center;
+  }
+  
+  .spline-container-debug {
+    transform: scale(0.8); /* Aplica zoom out também no container */
+    transform-origin: center center;
   }
 }
 
@@ -400,6 +422,9 @@
   background: var(--color-background);
   text-align: center;
   pointer-events: auto; /* Reativa interação para botões CTA */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .spline-cta-content {
@@ -506,6 +531,40 @@
   .spline-hero-content,
   .spline-why-content {
     padding: 1rem;
+  }
+  
+  /* Ajustes extras para smartphones pequenos */
+  .glass-widget-main {
+    width: 98%; /* Quase toda a largura da tela */
+    margin: 0 auto;
+  }
+  
+  .glass-widget-container {
+    padding: 0 0.25rem 1rem 0.25rem; /* Padding mínimo */
+  }
+  
+  .overlay-widgets-container {
+    padding: 0 0.25rem;
+  }
+  
+  /* Zoom out ainda maior para smartphones pequenos */
+  .spline-background {
+    transform: scale(0.7); /* Zoom out maior para telas pequenas */
+  }
+  
+  .spline-container-debug {
+    transform: scale(0.7);
+  }
+  
+  /* Centralização da seção CTA */
+  .spline-cta-section {
+    text-align: center;
+    padding: 2rem 1rem 4rem 1rem;
+  }
+  
+  .spline-cta-content {
+    margin: 0 auto;
+    max-width: 100%;
   }
 }
 
