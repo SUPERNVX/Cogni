@@ -278,3 +278,53 @@
   position: relative;
   user-select: none;
 }
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .magic-bento-container {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Bloqueia movimento horizontal */
+    width: 100%;
+    position: relative;
+  }
+  
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 90%; /* Reduzido para evitar corte */
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 0.5rem; /* Padding interno para segurança */
+  }
+  
+  .bento-item {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    position: relative;
+    transform: none !important; /* Remove transformações que causam movimento */
+    left: 0 !important;
+    right: 0 !important;
+    box-sizing: border-box;
+  }
+  
+  .bento-content {
+    text-align: center;
+    padding: 1rem; /* Reduzido para evitar overflow */
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  /* Garante que cards não ultrapassem os limites */
+  .card {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+}

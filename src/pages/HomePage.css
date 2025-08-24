@@ -397,11 +397,17 @@
   .spline-background {
     transform: scale(0.8); /* Zoom out no Spline para mobile */
     transform-origin: center center;
+    width: 100%; /* Mantém largura normal */
+    height: 100%; /* Mantém altura normal */
+    left: 0; /* Centralizado */
+    top: 100px; /* Posição normal */
   }
   
   .spline-container-debug {
     transform: scale(0.8); /* Aplica zoom out também no container */
     transform-origin: center center;
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 
@@ -547,13 +553,19 @@
     padding: 0 0.25rem;
   }
   
-  /* Zoom out ainda maior para smartphones pequenos */
+  /* Zoom out para smartphones pequenos */
   .spline-background {
-    transform: scale(0.7); /* Zoom out maior para telas pequenas */
+    transform: scale(0.8); /* Mantém zoom 0.8 para smartphones também */
+    width: 100%; /* Mantém largura normal */
+    height: 100%; /* Mantém altura normal */
+    left: 0; /* Centralizado */
+    top: 100px; /* Posição normal */
   }
   
   .spline-container-debug {
-    transform: scale(0.7);
+    transform: scale(0.8);
+    width: 100% !important;
+    height: 100% !important;
   }
   
   /* Centralização da seção CTA */
