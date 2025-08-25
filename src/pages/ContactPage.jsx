@@ -13,6 +13,19 @@ const ContactCard = ({ children, className = "", delay = 0, size = "normal" }) =
     const card = cardRef.current;
     if (!card) return;
 
+    // Verificar se é mobile
+    const isMobile = window.innerWidth <= 768;
+
+    // Se for mobile, mostrar diretamente sem animações
+    if (isMobile) {
+      gsap.set(card, { 
+        opacity: 1, 
+        y: 0,
+        visibility: "visible"
+      });
+      return;
+    }
+
     // Se já animou antes, mostrar diretamente
     if (hasContactAnimated) {
       gsap.set(card, { 
@@ -23,7 +36,7 @@ const ContactCard = ({ children, className = "", delay = 0, size = "normal" }) =
       return;
     }
 
-    // Inicializar elemento invisível para primeira animação
+    // Inicializar elemento invisível para primeira animação (apenas desktop)
     gsap.set(card, { 
       opacity: 0, 
       y: 30, // Slide sutil de baixo para cima
@@ -60,32 +73,34 @@ const ContactCard = ({ children, className = "", delay = 0, size = "normal" }) =
       observer.disconnect();
     };
 
-    // Efeitos de hover suavizados
-    const handleMouseEnter = () => {
-      gsap.to(card, {
-        y: -8,
-        scale: 1.02,
-        duration: 0.6,
-        ease: "power1.out"
-      });
-    };
+    // Efeitos de hover suavizados (apenas desktop)
+    if (!isMobile) {
+      const handleMouseEnter = () => {
+        gsap.to(card, {
+          y: -8,
+          scale: 1.02,
+          duration: 0.6,
+          ease: "power1.out"
+        });
+      };
 
-    const handleMouseLeave = () => {
-      gsap.to(card, {
-        y: 0,
-        scale: 1,
-        duration: 0.6,
-        ease: "power1.out"
-      });
-    };
+      const handleMouseLeave = () => {
+        gsap.to(card, {
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: "power1.out"
+        });
+      };
 
-    card.addEventListener('mouseenter', handleMouseEnter);
-    card.addEventListener('mouseleave', handleMouseLeave);
+      card.addEventListener('mouseenter', handleMouseEnter);
+      card.addEventListener('mouseleave', handleMouseLeave);
 
-    return () => {
-      card.removeEventListener('mouseenter', handleMouseEnter);
-      card.removeEventListener('mouseleave', handleMouseLeave);
-    };
+      return () => {
+        card.removeEventListener('mouseenter', handleMouseEnter);
+        card.removeEventListener('mouseleave', handleMouseLeave);
+      };
+    }
   }, [delay]);
 
   const sizeClasses = {

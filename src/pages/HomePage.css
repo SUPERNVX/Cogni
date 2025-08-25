@@ -395,17 +395,17 @@
   
   /* Ajustes específicos para o Spline no mobile */
   .spline-background {
-    transform: scale(0.8); /* Zoom out no Spline para mobile */
-    transform-origin: center center;
-    width: 100%; /* Mantém largura normal */
-    height: 100%; /* Mantém altura normal */
-    left: 0; /* Centralizado */
-    top: 100px; /* Posição normal */
+    transform: scale(0.6); /* Zoom menor para evitar corte lateral */
+    transform-origin: center top; /* Origem no topo para elevar */
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 50px; /* Mais alto para não ficar atrás do widget */
   }
   
   .spline-container-debug {
-    transform: scale(0.8); /* Aplica zoom out também no container */
-    transform-origin: center center;
+    transform: scale(0.6); /* Zoom menor para evitar corte lateral */
+    transform-origin: center top;
     width: 100% !important;
     height: 100% !important;
   }
@@ -555,15 +555,17 @@
   
   /* Zoom out para smartphones pequenos */
   .spline-background {
-    transform: scale(0.8); /* Mantém zoom 0.8 para smartphones também */
-    width: 100%; /* Mantém largura normal */
-    height: 100%; /* Mantém altura normal */
-    left: 0; /* Centralizado */
-    top: 100px; /* Posição normal */
+    transform: scale(0.5); /* Zoom ainda menor para smartphones */
+    transform-origin: center top;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 30px; /* Ainda mais alto para smartphones */
   }
   
   .spline-container-debug {
-    transform: scale(0.8);
+    transform: scale(0.5);
+    transform-origin: center top;
     width: 100% !important;
     height: 100% !important;
   }
