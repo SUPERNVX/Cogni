@@ -352,36 +352,36 @@
   /* SPLINE - Posicionamento compatível com telefone */
   .spline-background {
     position: fixed;
-    top: 80px; /* Mais próximo do header para telefone */
-    left: 0;
+    top: 80px;
+    left: -10%; /* Move para a esquerda */
     width: 100vw;
-    height: 50vh; /* Altura menor para telefone */
+    height: 50vh;
     z-index: 0;
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Alinha à esquerda */
   }
   
   .spline-container-debug {
-    width: 120% !important; /* Ligeiramente maior para preencher */
+    width: 120% !important;
     height: 120% !important;
-    transform: scale(0.8); /* Zoom reduzido para telefone */
+    transform: scale(0.8);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Alinha à esquerda */
   }
   
   /* WIDGET PRINCIPAL - Centralização perfeita */
   .glass-widget-section {
     height: auto;
-    margin-top: 55vh; /* Espaço ajustado para o Spline menor */
+    margin-top: 40vh; /* Reduzido para parallax mais rápido */
     padding: 1rem 0;
   }
   
   .glass-widget-container {
     width: 100vw;
-    padding: 0;
+    padding: 0 1rem;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -391,8 +391,8 @@
   
   .glass-widget-main {
     width: 100%;
-    max-width: 320px;
-    margin: 0;
+    max-width: 350px;
+    margin: 0 auto;
     min-height: auto;
   }
   
@@ -412,15 +412,34 @@
   }
   
   .overlay-widgets-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+    align-items: center;
   }
   
   .overlay-widget {
+    width: 90%;
+    max-width: 280px; /* Reduzido para não ser cortado */
     margin: 0 auto;
-    max-width: 100%;
-    width: 100%;
+    padding: 1rem; /* Reduzido de 1.5rem */
+    box-sizing: border-box;
+  }
+  
+  /* Reduzir texto dos widgets secundários */
+  .overlay-widget .widget-title {
+    font-size: 1rem; /* Reduzido */
+  }
+  
+  .overlay-widget .widget-text {
+    font-size: 0.85rem; /* Reduzido */
+    line-height: 1.4;
+  }
+  
+  .overlay-widget .badge {
+    font-size: 0.75rem; /* Reduzido */
+    padding: 0.2rem 0.4rem;
   }
 }
 
@@ -493,22 +512,39 @@
   
   /* SPLINE - Ajuste para telas muito pequenas */
   .spline-background {
-    top: 100px; /* Mais próximo do header */
-    height: 50vh; /* Altura menor */
+    top: 70px;
+    left: -15%; /* Mais para a esquerda em telas pequenas */
+    height: 45vh;
   }
   
   /* WIDGET PRINCIPAL */
   .glass-widget-section {
-    margin-top: 45vh; /* Menos espaço para o Spline menor */
+    margin-top: 35vh; /* Parallax ainda mais rápido */
   }
   
   .glass-widget-main {
     width: 95%;
-    max-width: 95%;
+    max-width: 320px;
+    margin: 0 auto;
   }
   
   .glass-widget-initial {
     padding: 1rem;
+  }
+  
+  /* Widgets secundários ainda menores para smartphones */
+  .overlay-widget {
+    width: 85%;
+    max-width: 250px;
+    padding: 0.8rem;
+  }
+  
+  .overlay-widget .widget-title {
+    font-size: 0.9rem;
+  }
+  
+  .overlay-widget .widget-text {
+    font-size: 0.8rem;
   }
   
   .glass-widget-title h2 {
