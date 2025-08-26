@@ -283,7 +283,7 @@
 @media (max-width: 768px) {
   .magic-bento-container {
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -299,14 +299,14 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 0;
+    padding: 0 1rem;
     align-items: center;
   }
   
   .bento-item {
-    width: 90%;
-    max-width: 350px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
     grid-column: unset !important;
     grid-row: unset !important;
     box-sizing: border-box;
@@ -323,7 +323,7 @@
   
   .card {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     box-sizing: border-box;
     padding: 1.5rem;
     border-radius: 16px;
