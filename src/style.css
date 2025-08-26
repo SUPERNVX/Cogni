@@ -34,20 +34,29 @@ body {
 @media (max-width: 768px) {
   body, html {
     overflow-x: hidden !important;
-    width: 100%;
-    position: relative;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
   }
   
   .app-container {
     overflow-x: hidden !important;
-    width: 100%;
-    position: relative;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-content-wrapper {
+    padding: 0 !important; /* Remove padding que empurra para direita */
+    margin: 0;
+    width: 100vw;
   }
   
   .main-content {
     overflow-x: hidden !important;
-    width: 100%;
-    position: relative;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -1358,31 +1367,15 @@ body {
 /* === MOBILE RESPONSIVO COMPLETO - TODAS AS SEÇÕES === */
 @media (max-width: 768px) {
     
-    /* GLOBAL - Previne scroll horizontal */
-    body, html {
-        overflow-x: hidden !important;
-        width: 100vw;
-    }
-    
-    .app-container {
-        overflow-x: hidden !important;
-        width: 100vw;
-    }
-    
-    .main-content {
-        overflow-x: hidden !important;
-        width: 100vw;
-        padding: 0;
-    }
-    
     /* === SEÇÃO CONTACT === */
     .contact-container {
-        width: 100%;
+        width: 100vw;
         padding: 2rem 0;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
+        box-sizing: border-box;
     }
     
     .contact-card {
@@ -1413,12 +1406,13 @@ body {
     
     /* === SEÇÃO ABOUT === */
     .about-container {
-        width: 100%;
+        width: 100vw;
         padding: 2rem 0;
         margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
     }
     
     .about-grid {
@@ -1455,12 +1449,13 @@ body {
     
     /* === SEÇÃO PROJECTS === */
     .magic-bento-container {
-        width: 100%;
+        width: 100vw;
         padding: 2rem 0;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
+        box-sizing: border-box;
     }
     
     .bento-grid {

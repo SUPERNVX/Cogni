@@ -282,7 +282,7 @@
 /* === MOBILE RESPONSIVO MAGICBENTO === */
 @media (max-width: 768px) {
   .magic-bento-container {
-    width: 100%;
+    width: 100vw;
     padding: 2rem 0;
     display: flex;
     justify-content: center;
@@ -290,6 +290,7 @@
     min-height: 100vh;
     margin: 0;
     overflow-x: hidden;
+    box-sizing: border-box;
   }
   
   .bento-grid {

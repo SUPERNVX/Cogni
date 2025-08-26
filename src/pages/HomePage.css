@@ -380,11 +380,13 @@
   }
   
   .glass-widget-container {
-    width: 100%;
-    padding: 0 1rem;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
   }
   
   .glass-widget-main {
