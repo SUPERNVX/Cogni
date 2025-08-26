@@ -346,68 +346,77 @@
   animation-delay: 0.4s;
 }
 
-/* Responsividade para o novo widget de vidro */
+/* === MOBILE RESPONSIVO COMPLETO - APENAS TELEFONE === */
 @media (max-width: 768px) {
+  
+  /* SPLINE - Posicionamento entre widget e header */
+  .spline-background {
+    position: fixed;
+    top: 120px; /* Entre header e widget */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    width: 100vw;
+    height: 60vh; /* Altura controlada */
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .spline-container-debug {
+    width: 100% !important;
+    height: 100% !important;
+    transform: none; /* Zoom normal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* WIDGET PRINCIPAL - Centralização perfeita */
   .glass-widget-section {
-    height: 30vh;
+    height: auto;
+    margin-top: 70vh; /* Espaço para o Spline */
+    padding: 1rem 0;
+  }
+  
+  .glass-widget-container {
+    width: 100vw;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .glass-widget-main {
-    min-height: 180px;
-    width: 95%; /* Aumenta a largura no mobile */
-    margin: 0 auto; /* Garante centralização */
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    min-height: auto;
   }
   
   .glass-widget-initial {
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
-    text-align: center; /* Centraliza o texto */
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
   }
   
   .glass-widget-expanded {
-    padding: 0 1.5rem 2rem 1.5rem;
-  }
-  
-  .glass-widget-title {
-    min-width: auto;
+    padding: 0 1.5rem 1.5rem 1.5rem;
   }
   
   .glass-widget-title h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .overlay-widgets-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 0.5rem; /* Adiciona padding interno */
+    gap: 1.5rem;
+    padding: 0;
   }
   
   .overlay-widget {
-    margin: 0 auto; /* Centraliza cada widget */
-    max-width: 100%; /* Garante que não ultrapasse o container */
-  }
-  
-  .glass-widget-container {
-    padding: 0 0.5rem 1rem 0.5rem; /* Reduz padding lateral */
-    justify-content: center; /* Força centralização */
-  }
-  
-  /* Ajustes específicos para o Spline no mobile */
-  .spline-background {
-    transform: scale(0.6); /* Zoom menor para evitar corte lateral */
-    transform-origin: center top; /* Origem no topo para elevar */
+    margin: 0 auto;
+    max-width: 100%;
     width: 100%;
-    height: 100%;
-    left: 0;
-    top: 50px; /* Mais alto para não ficar atrás do widget */
-  }
-  
-  .spline-container-debug {
-    transform: scale(0.6); /* Zoom menor para evitar corte lateral */
-    transform-origin: center top;
-    width: 100% !important;
-    height: 100% !important;
   }
 }
 
@@ -475,110 +484,48 @@
   color: white;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .spline-hero-content,
-  .spline-why-content {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
-
-  .spline-button-group {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .spline-widgets-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-
-  .spline-hero-section,
-  .spline-why-section {
-    padding: 2rem 1rem;
-  }
-
-  .spline-additional-content {
-    padding: 2rem 1rem;
-  }
-
-  .spline-cta-section {
-    padding: 4rem 1rem;
-  }
-
-  .spline-cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .spline-cta-button {
-    min-width: 250px;
-  }
-}
-
+/* === SMARTPHONES PEQUENOS === */
 @media (max-width: 480px) {
-  .spline-main-title {
-    font-size: 2rem;
+  
+  /* SPLINE - Ajuste para telas muito pequenas */
+  .spline-background {
+    top: 100px; /* Mais próximo do header */
+    height: 50vh; /* Altura menor */
   }
-
-  .spline-main-subtitle {
-    font-size: 1rem;
+  
+  /* WIDGET PRINCIPAL */
+  .glass-widget-section {
+    margin-top: 60vh; /* Menos espaço para o Spline */
   }
-
-  .spline-section-title {
-    font-size: 1.8rem;
+  
+  .glass-widget-main {
+    width: 95%;
+    max-width: 95%;
   }
-
-  .spline-section-text {
-    font-size: 1rem;
-  }
-
-  .spline-hero-content,
-  .spline-why-content {
+  
+  .glass-widget-initial {
     padding: 1rem;
   }
   
-  /* Ajustes extras para smartphones pequenos */
-  .glass-widget-main {
-    width: 98%; /* Quase toda a largura da tela */
-    margin: 0 auto;
+  .glass-widget-title h2 {
+    font-size: 1.2rem;
   }
   
-  .glass-widget-container {
-    padding: 0 0.25rem 1rem 0.25rem; /* Padding mínimo */
-  }
-  
-  .overlay-widgets-container {
-    padding: 0 0.25rem;
-  }
-  
-  /* Zoom out para smartphones pequenos */
-  .spline-background {
-    transform: scale(0.5); /* Zoom ainda menor para smartphones */
-    transform-origin: center top;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 30px; /* Ainda mais alto para smartphones */
-  }
-  
-  .spline-container-debug {
-    transform: scale(0.5);
-    transform-origin: center top;
-    width: 100% !important;
-    height: 100% !important;
-  }
-  
-  /* Centralização da seção CTA */
+  /* CTA SECTION */
   .spline-cta-section {
-    text-align: center;
-    padding: 2rem 1rem 4rem 1rem;
+    padding: 2rem 1rem;
   }
   
   .spline-cta-content {
+    width: 95%;
+    max-width: 95%;
     margin: 0 auto;
-    max-width: 100%;
+  }
+  
+  .spline-cta-button {
+    width: 100%;
+    margin: 0.5rem 0;
+    min-width: auto;
   }
 }
 

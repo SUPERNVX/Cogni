@@ -279,52 +279,61 @@
   user-select: none;
 }
 
-/* Responsividade para mobile */
+/* === MOBILE RESPONSIVO MAGICBENTO === */
 @media (max-width: 768px) {
   .magic-bento-container {
-    padding: 0.5rem;
+    width: 100vw;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow-x: hidden; /* Bloqueia movimento horizontal */
-    width: 100%;
-    position: relative;
+    margin: 0;
+    overflow-x: hidden;
   }
   
   .bento-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    max-width: 90%; /* Reduzido para evitar corte */
+    width: 90%;
+    max-width: 90%;
     margin: 0 auto;
-    width: 100%;
-    padding: 0 0.5rem; /* Padding interno para segurança */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
   }
   
   .bento-item {
-    margin: 0 auto;
-    max-width: 100%;
     width: 100%;
-    grid-column: 1 !important;
-    grid-row: auto !important;
-    position: relative;
-    transform: none !important; /* Remove transformações que causam movimento */
-    left: 0 !important;
-    right: 0 !important;
+    margin: 0 auto;
+    grid-column: unset !important;
+    grid-row: unset !important;
     box-sizing: border-box;
+    transform: none !important;
+    position: relative;
   }
   
   .bento-content {
-    text-align: center;
-    padding: 1rem; /* Reduzido para evitar overflow */
-    box-sizing: border-box;
     width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    box-sizing: border-box;
   }
   
-  /* Garante que cards não ultrapassem os limites */
   .card {
-    max-width: 100%;
-    box-sizing: border-box;
+    width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
