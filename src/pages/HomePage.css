@@ -353,14 +353,14 @@
   .spline-background {
     position: fixed;
     top: 80px;
-    left: -10%; /* Move para a esquerda */
+    left: -5%; /* Movido um pouco para a direita */
     width: 100vw;
     height: 50vh;
     z-index: 0;
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinha à esquerda */
+    justify-content: flex-start;
   }
   
   .spline-container-debug {
@@ -375,7 +375,7 @@
   /* WIDGET PRINCIPAL - Centralização perfeita */
   .glass-widget-section {
     height: auto;
-    margin-top: 40vh; /* Reduzido para parallax mais rápido */
+    margin-top: 30vh; /* Reduzido ainda mais para aparecer mais cedo */
     padding: 1rem 0;
   }
   
@@ -420,10 +420,10 @@
   }
   
   .overlay-widget {
-    width: 90%;
-    max-width: 280px; /* Reduzido para não ser cortado */
+    width: 95%; /* Aumentado para tocar quase a borda */
+    max-width: none; /* Removido limite para usar toda largura */
     margin: 0 auto;
-    padding: 1rem; /* Reduzido de 1.5rem */
+    padding: 1rem;
     box-sizing: border-box;
   }
   
@@ -513,13 +513,13 @@
   /* SPLINE - Ajuste para telas muito pequenas */
   .spline-background {
     top: 70px;
-    left: -15%; /* Mais para a esquerda em telas pequenas */
+    left: -8%; /* Ajustado para a direita também */
     height: 45vh;
   }
   
   /* WIDGET PRINCIPAL */
   .glass-widget-section {
-    margin-top: 35vh; /* Parallax ainda mais rápido */
+    margin-top: 25vh; /* Aparece ainda mais cedo */
   }
   
   .glass-widget-main {
@@ -532,10 +532,10 @@
     padding: 1rem;
   }
   
-  /* Widgets secundários ainda menores para smartphones */
+  /* Widgets secundários para smartphones */
   .overlay-widget {
-    width: 85%;
-    max-width: 250px;
+    width: 95%; /* Tocar quase a borda também */
+    max-width: none; /* Sem limite de largura */
     padding: 0.8rem;
   }
   
