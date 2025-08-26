@@ -282,8 +282,8 @@
 /* === MOBILE RESPONSIVO MAGICBENTO === */
 @media (max-width: 768px) {
   .magic-bento-container {
-    width: 100vw;
-    padding: 2rem 0;
+    width: 100%;
+    padding: 2rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,17 +293,19 @@
   }
   
   .bento-grid {
-    width: 90%;
-    max-width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     padding: 0;
+    align-items: center;
   }
   
   .bento-item {
-    width: 100%;
+    width: 90%;
+    max-width: 350px;
     margin: 0 auto;
     grid-column: unset !important;
     grid-row: unset !important;
@@ -325,15 +327,24 @@
     box-sizing: border-box;
     padding: 1.5rem;
     border-radius: 16px;
+    text-align: center;
   }
   
   .card h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   .card p {
     font-size: 0.95rem;
     line-height: 1.5;
+    text-align: center;
+  }
+  
+  .card .widget-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
   }
 }

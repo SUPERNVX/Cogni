@@ -349,22 +349,24 @@
 /* === MOBILE RESPONSIVO COMPLETO - APENAS TELEFONE === */
 @media (max-width: 768px) {
   
-  /* SPLINE - Posicionamento entre widget e header */
+  /* SPLINE - Posicionamento compatível com telefone */
   .spline-background {
     position: fixed;
-    top: 120px; /* Entre header e widget */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
+    top: 80px; /* Mais próximo do header para telefone */
+    left: 0;
     width: 100vw;
-    height: 60vh; /* Altura controlada */
+    height: 50vh; /* Altura menor para telefone */
     z-index: 0;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .spline-container-debug {
-    width: 100% !important;
-    height: 100% !important;
-    transform: none; /* Zoom normal */
+    width: 120% !important; /* Ligeiramente maior para preencher */
+    height: 120% !important;
+    transform: scale(0.8); /* Zoom reduzido para telefone */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -373,7 +375,7 @@
   /* WIDGET PRINCIPAL - Centralização perfeita */
   .glass-widget-section {
     height: auto;
-    margin-top: 70vh; /* Espaço para o Spline */
+    margin-top: 55vh; /* Espaço ajustado para o Spline menor */
     padding: 1rem 0;
   }
   
@@ -495,7 +497,7 @@
   
   /* WIDGET PRINCIPAL */
   .glass-widget-section {
-    margin-top: 60vh; /* Menos espaço para o Spline */
+    margin-top: 45vh; /* Menos espaço para o Spline menor */
   }
   
   .glass-widget-main {

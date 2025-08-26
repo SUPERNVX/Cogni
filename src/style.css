@@ -1377,8 +1377,8 @@ body {
     
     /* === SEÇÃO CONTACT === */
     .contact-container {
-        width: 100vw;
-        padding: 2rem 0;
+        width: 100%;
+        padding: 2rem 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1387,10 +1387,11 @@ body {
     
     .contact-card {
         width: 90%;
-        max-width: 90%;
+        max-width: 400px;
         margin: 0 auto;
         padding: 2rem 1.5rem;
         box-sizing: border-box;
+        text-align: center;
     }
     
     .form-row {
@@ -1412,30 +1413,34 @@ body {
     
     /* === SEÇÃO ABOUT === */
     .about-container {
-        width: 100vw;
-        padding: 2rem 0;
+        width: 100%;
+        padding: 2rem 1rem;
         margin: 0;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     
     .about-grid {
-        width: 90%;
-        max-width: 90%;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         padding: 0;
+        align-items: center;
     }
     
     .about-card {
-        width: 100%;
+        width: 90%;
+        max-width: 350px;
         margin: 0 auto;
         grid-column: unset !important;
         grid-row: unset !important;
         box-sizing: border-box;
         padding: 1.5rem;
+        text-align: center;
     }
     
     .stats-container {
@@ -1450,8 +1455,8 @@ body {
     
     /* === SEÇÃO PROJECTS === */
     .magic-bento-container {
-        width: 100vw;
-        padding: 2rem 0;
+        width: 100%;
+        padding: 2rem 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1459,17 +1464,19 @@ body {
     }
     
     .bento-grid {
-        width: 90%;
-        max-width: 90%;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         padding: 0;
+        align-items: center;
     }
     
     .bento-item {
-        width: 100%;
+        width: 90%;
+        max-width: 350px;
         margin: 0 auto;
         grid-column: unset !important;
         grid-row: unset !important;
@@ -1481,5 +1488,6 @@ body {
         margin: 0 auto;
         box-sizing: border-box;
         padding: 1.5rem;
+        text-align: center;
     }
 }
