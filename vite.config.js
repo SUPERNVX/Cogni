@@ -19,5 +19,9 @@ export default defineConfig({
         }
       }
     }
+  },
+  // Configuração para desenvolvimento local
+  server: {
+    historyApiFallback: true
   }
 })
