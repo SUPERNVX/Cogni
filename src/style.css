@@ -103,6 +103,8 @@ body {
     justify-content: flex-end;
     font-size: 0.875rem;
     margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1000; /* Acima do Spline */
 }
 
 @media (min-width: 768px) {

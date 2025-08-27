@@ -1,4 +1,5 @@
 import { useRef, useEffect, useCallback, useState, memo } from "react";
+import { useTranslation } from 'react-i18next';
 import { gsap } from "gsap";
 import "./MagicBento.css";
 import calculadoraImage from "../assets/Calculadora de notas.png";
@@ -9,59 +10,7 @@ const DEFAULT_SPOTLIGHT_RADIUS = 300;
 const DEFAULT_GLOW_COLOR = "132, 0, 255";
 const MOBILE_BREAKPOINT = 768;
 
-const cardData = [
-  {
-    color: "#060010",
-    title: "Feedback que Transforma",
-    description: "Estudos mostram que feedback direcionado aumenta a retenção de conhecimento em até 75%. O Scribo não apenas corrige, mas ensina a estrutura e o estilo que faltam em sua escrita.",
-    label: "Metodologia",
-    action: "Saiba Mais sobre a Metodologia →",
-    link: "#scribo"
-  },
-  {
-    color: "#060010",
-    title: "Foco na Produtividade",
-    description: "Alunos que definem metas claras e tangíveis têm 42% mais chances de alcançá-las. Gradus, nossa calculadora de notas, é a sua primeira etapa para um plano de estudos eficaz.",
-    label: "Planejamento",
-    action: "Entenda a Importância da Meta →",
-    link: "#gradus"
-  },
-  {
-    color: "#060010",
-    title: "Scribo: Seu Assistente de Escrita IA",
-    description: "Otimize suas redações com feedback instantâneo e inteligente. Nossa IA analisa e sugere melhorias para você alcançar a nota máxima.",
-    label: "Escrita Inteligente",
-    action: "Experimente o Scribo Grátis →",
-    link: "#scribo",
-    hasImage: false
-  },
-  {
-    color: "#060010",
-    title: "Gradus: Planejamento Estratégico",
-    description: "Planeje sua jornada de estudos! Com Gradus, você descobre exatamente quanto precisa em cada prova para atingir seus objetivos e manter-se no caminho certo.",
-    label: "Calculadora",
-    action: "Calcule Suas Metas Agora →",
-    link: "#gradus",
-    hasImage: true,
-    image: calculadoraImage
-  },
-  {
-    color: "#060010",
-    title: "Análise Completa",
-    description: "De gramática a coesão textual, o Scribo oferece uma análise completa. Receba sugestões claras para cada parágrafo e prepare-se para o sucesso.",
-    label: "Análise Detalhada",
-    action: "Veja um Exemplo →",
-    link: "#scribo"
-  },
-  {
-    color: "#060010",
-    title: "Simule Cenários",
-    description: "Experimente diferentes combinações de notas e veja o impacto no seu resultado final. Com Gradus, o planejamento estratégico está na palma da sua mão.",
-    label: "Simulação",
-    action: "Simule e Planeje →",
-    link: "#gradus"
-  },
-];
+// cardData será definido dentro do componente para usar traduções
 
 // --- FUNÇÕES UTILITÁRIAS ---
 const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
@@ -295,9 +244,57 @@ const MagicBento = ({
   disableAnimations = false, spotlightRadius = DEFAULT_SPOTLIGHT_RADIUS, particleCount = DEFAULT_PARTICLE_COUNT,
   enableTilt = false, glowColor = DEFAULT_GLOW_COLOR, clickEffect = true, enableMagnetism = true,
 }) => {
+  const { t } = useTranslation();
   const gridRef = useRef(null);
   const isMobile = useMobileDetection();
   const shouldDisableAnimations = disableAnimations || isMobile;
+
+  // Dados dos cards usando traduções
+  const cardData = [
+    {
+      color: "#060010",
+      title: t('projects.feedback.title'),
+      description: t('projects.feedback.description'),
+      label: t('projects.feedback.label'),
+      action: t('projects.feedback.action'),
+      link: "#scribo"
+    },
+    {
+      color: "#060010",
+      title: t('projects.productivity.title'),
+      description: t('projects.productivity.description'),
+      label: t('projects.productivity.label'),
+      action: t('projects.productivity.action'),
+      link: "#gradus"
+    },
+    {
+      color: "#060010",
+      title: t('projects.scribo.title'),
+      description: t('projects.scribo.description'),
+      label: t('projects.scribo.label'),
+      action: t('projects.scribo.action'),
+      link: "#scribo",
+      hasImage: false
+    },
+    {
+      color: "#060010",
+      title: t('projects.gradus.title'),
+      description: t('projects.gradus.description'),
+      label: t('projects.gradus.label'),
+      action: t('projects.gradus.action'),
+      link: "#gradus",
+      hasImage: true,
+      image: calculadoraImage
+    },
+    {
+      color: "#060010",
+      title: t('projects.analysis.title'),
+      description: t('projects.analysis.description'),
+      label: t('projects.analysis.label'),
+      action: t('projects.analysis.action'),
+      link: "#analysis"
+    }
+  ];
 
   return (
     <>

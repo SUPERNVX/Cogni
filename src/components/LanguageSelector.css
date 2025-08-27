@@ -1,6 +1,7 @@
 .language-selector {
   position: relative;
   display: inline-block;
+  z-index: 1000; /* Acima do Spline */
 }
 
 .language-button {
@@ -46,7 +47,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   overflow: hidden;
-  z-index: 1000;
+  z-index: 1001; /* Ainda mais alto */
   min-width: 150px;
 }
 
