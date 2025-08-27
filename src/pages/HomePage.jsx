@@ -144,7 +144,7 @@ const HomePage = () => {
         {!splineLoaded && !splineError && (
           <div className="spline-loading">
             <div className="spline-loading-spinner"></div>
-            <p>Preparando experiência 3D...</p>
+            <p>{t('home.splineLoading')}</p>
             <div className="spline-loading-progress">
               <div className="spline-loading-bar"></div>
             </div>
@@ -155,7 +155,7 @@ const HomePage = () => {
           <div className="spline-error">
             <div className="spline-error-content">
               <h3>{t('common.error')}</h3>
-              <p>Mas não se preocupe, o conteúdo continua disponível abaixo.</p>
+              <p>{t('home.splineError')}</p>
               <button onClick={() => window.location.reload()} className="spline-retry-button">
                 {t('common.tryAgain')}
               </button>

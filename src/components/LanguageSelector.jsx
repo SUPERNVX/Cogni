@@ -4,13 +4,13 @@ import { Globe } from 'lucide-react';
 import './LanguageSelector.css';
 
 const LanguageSelector = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const languages = [
-    { code: 'pt', name: 'Português', flag: '🇧🇷' },
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' }
+    { code: 'pt', name: t('languageSelector.pt'), flag: '🇧🇷' },
+    { code: 'en', name: t('languageSelector.en'), flag: '🇺🇸' },
+    { code: 'es', name: t('languageSelector.es'), flag: '🇪🇸' }
   ];
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
@@ -26,7 +26,7 @@ const LanguageSelector = () => {
       <button 
         className="language-button"
         onClick={() => setIsOpen(!isOpen)}
-        aria-label="Select language"
+        aria-label={t('languageSelector.ariaLabel')}
       >
         <Globe size={16} />
         <span className="language-flag">{currentLanguage.flag}</span>

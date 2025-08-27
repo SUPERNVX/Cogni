@@ -2,6 +2,7 @@ import { useRef, useEffect, useCallback, useState, memo } from "react";
 import { gsap } from "gsap";
 import "./MagicBento.css";
 import calculadoraImage from "../assets/Calculadora de notas.png";
+import { useTranslation } from "react-i18next";
 
 // --- DADOS E CONSTANTES (MOVIMENTEI PARA CIMA PARA MELHOR ORGANIZAÇÃO) ---
 const DEFAULT_PARTICLE_COUNT = 12;
@@ -9,56 +10,56 @@ const DEFAULT_SPOTLIGHT_RADIUS = 300;
 const DEFAULT_GLOW_COLOR = "132, 0, 255";
 const MOBILE_BREAKPOINT = 768;
 
-const cardData = [
+const getCardData = (t) => [
   {
     color: "#060010",
-    title: "Feedback que Transforma",
-    description: "Estudos mostram que feedback direcionado aumenta a retenção de conhecimento em até 75%. O Scribo não apenas corrige, mas ensina a estrutura e o estilo que faltam em sua escrita.",
-    label: "Metodologia",
-    action: "Saiba Mais sobre a Metodologia →",
+    title: t("magicBento.card1.title"),
+    description: t("magicBento.card1.description"),
+    label: t("magicBento.card1.label"),
+    action: t("magicBento.card1.action"),
     link: "#scribo"
   },
   {
     color: "#060010",
-    title: "Foco na Produtividade",
-    description: "Alunos que definem metas claras e tangíveis têm 42% mais chances de alcançá-las. Gradus, nossa calculadora de notas, é a sua primeira etapa para um plano de estudos eficaz.",
-    label: "Planejamento",
-    action: "Entenda a Importância da Meta →",
+    title: t("magicBento.card2.title"),
+    description: t("magicBento.card2.description"),
+    label: t("magicBento.card2.label"),
+    action: t("magicBento.card2.action"),
     link: "#gradus"
   },
   {
     color: "#060010",
-    title: "Scribo: Seu Assistente de Escrita IA",
-    description: "Otimize suas redações com feedback instantâneo e inteligente. Nossa IA analisa e sugere melhorias para você alcançar a nota máxima.",
-    label: "Escrita Inteligente",
-    action: "Experimente o Scribo Grátis →",
+    title: t("magicBento.card3.title"),
+    description: t("magicBento.card3.description"),
+    label: t("magicBento.card3.label"),
+    action: t("magicBento.card3.action"),
     link: "#scribo",
     hasImage: false
   },
   {
     color: "#060010",
-    title: "Gradus: Planejamento Estratégico",
-    description: "Planeje sua jornada de estudos! Com Gradus, você descobre exatamente quanto precisa em cada prova para atingir seus objetivos e manter-se no caminho certo.",
-    label: "Calculadora",
-    action: "Calcule Suas Metas Agora →",
+    title: t("magicBento.card4.title"),
+    description: t("magicBento.card4.description"),
+    label: t("magicBento.card4.label"),
+    action: t("magicBento.card4.action"),
     link: "#gradus",
     hasImage: true,
     image: calculadoraImage
   },
   {
     color: "#060010",
-    title: "Análise Completa",
-    description: "De gramática a coesão textual, o Scribo oferece uma análise completa. Receba sugestões claras para cada parágrafo e prepare-se para o sucesso.",
-    label: "Análise Detalhada",
-    action: "Veja um Exemplo →",
+    title: t("magicBento.card5.title"),
+    description: t("magicBento.card5.description"),
+    label: t("magicBento.card5.label"),
+    action: t("magicBento.card5.action"),
     link: "#scribo"
   },
   {
     color: "#060010",
-    title: "Simule Cenários",
-    description: "Experimente diferentes combinações de notas e veja o impacto no seu resultado final. Com Gradus, o planejamento estratégico está na palma da sua mão.",
-    label: "Simulação",
-    action: "Simule e Planeje →",
+    title: t("magicBento.card6.title"),
+    description: t("magicBento.card6.description"),
+    label: t("magicBento.card6.label"),
+    action: t("magicBento.card6.action"),
     link: "#gradus"
   },
 ];
@@ -298,6 +299,8 @@ const MagicBento = ({
   const gridRef = useRef(null);
   const isMobile = useMobileDetection();
   const shouldDisableAnimations = disableAnimations || isMobile;
+  const { t } = useTranslation();
+  const cardData = getCardData(t);
 
   return (
     <>

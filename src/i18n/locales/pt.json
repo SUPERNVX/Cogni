@@ -6,7 +6,8 @@
     "contact": "Contato"
   },
   "header": {
-    "logoText": "Cogni IA"
+    "logoText": "Cogni IA",
+    "logoAlt": "Logo da Cogni IA"
   },
   "home": {
     "hero": {
@@ -33,85 +34,144 @@
       "subtitle": "Domine seus estudos. Alcance suas metas. Supere seus limites com ferramentas que realmente funcionam.",
       "primaryButton": "Começar Agora - É Grátis",
       "secondaryButton": "Conheça Nossa Missão"
-    }
+    },
+    "splineLoading": "Preparando experiência 3D...",
+    "splineError": "Mas não se preocupe, o conteúdo continua disponível abaixo."
   },
-  "about": {
-    "title": "Sobre a Cogni IA",
-    "mission": {
-      "title": "Nossa Missão",
-      "description": "Democratizar o acesso à educação de qualidade através da inteligência artificial, oferecendo ferramentas que potencializam o aprendizado de cada estudante."
-    },
-    "vision": {
-      "title": "Nossa Visão",
-      "description": "Ser a principal plataforma de IA educacional do Brasil, transformando a forma como estudantes aprendem e se preparam para o futuro."
-    },
-    "stats": {
-      "title": "Nossos Números",
-      "students": "Estudantes Ativos",
-      "schools": "Escolas Parceiras",
-      "satisfaction": "Satisfação",
-      "improvement": "Melhoria nas Notas"
-    },
-    "values": {
-      "title": "Nossos Valores",
-      "description": "Inovação, acessibilidade e excelência educacional guiam cada decisão que tomamos para criar o futuro da educação."
-    },
-    "differential": {
-      "title": "Nosso Diferencial",
-      "description": "Combinamos tecnologia de ponta com metodologias pedagógicas comprovadas, criando uma experiência de aprendizado única e personalizada."
-    },
-    "technology": {
-      "title": "Tecnologia Avançada",
-      "description": "Utilizamos as mais recentes inovações em IA e machine learning para oferecer feedback instantâneo e personalizado."
-    }
+  "languageSelector": {
+    "ariaLabel": "Selecionar idioma",
+    "pt": "Português",
+    "en": "Inglês",
+    "es": "Espanhol"
   },
-  "projects": {
-    "title": "Nossos Projetos",
-    "feedback": {
+  "magicBento": {
+    "card1": {
       "title": "Feedback que Transforma",
       "description": "Estudos mostram que feedback direcionado aumenta a retenção de conhecimento em até 75%. O Scribo não apenas corrige, mas ensina a estrutura e o estilo que faltam em sua escrita.",
       "label": "Metodologia",
       "action": "Saiba Mais sobre a Metodologia →"
     },
-    "productivity": {
+    "card2": {
       "title": "Foco na Produtividade",
       "description": "Alunos que definem metas claras e tangíveis têm 42% mais chances de alcançá-las. Gradus, nossa calculadora de notas, é a sua primeira etapa para um plano de estudos eficaz.",
       "label": "Planejamento",
       "action": "Entenda a Importância da Meta →"
     },
-    "scribo": {
+    "card3": {
       "title": "Scribo: Seu Assistente de Escrita IA",
       "description": "Otimize suas redações com feedback instantâneo e inteligente. Nossa IA analisa e sugere melhorias para você alcançar a nota máxima.",
       "label": "Escrita Inteligente",
       "action": "Experimente o Scribo Grátis →"
     },
-    "gradus": {
+    "card4": {
       "title": "Gradus: Planejamento Estratégico",
       "description": "Planeje sua jornada de estudos! Com Gradus, você descobre exatamente quanto precisa em cada prova para atingir seus objetivos e manter-se no caminho certo.",
       "label": "Calculadora",
       "action": "Calcule Suas Metas Agora →"
     },
-    "analysis": {
+    "card5": {
       "title": "Análise Completa",
-      "description": "Receba relatórios detalhados sobre seu progresso, identificando pontos fortes e áreas que precisam de mais atenção em seus estudos.",
-      "label": "Relatórios",
-      "action": "Veja Seus Relatórios →"
+      "description": "De gramática a coesão textual, o Scribo oferece uma análise completa. Receba sugestões claras para cada parágrafo e prepare-se para o sucesso.",
+      "label": "Análise Detalhada",
+      "action": "Veja um Exemplo →"
+    },
+    "card6": {
+      "title": "Simule Cenários",
+      "description": "Experimente diferentes combinações de notas e veja o impacto no seu resultado final. Com Gradus, o planejamento estratégico está na palma da sua mão.",
+      "label": "Simulação",
+      "action": "Simule e Planeje →"
     }
   },
-  "contact": {
-    "title": "Entre em Contato",
-    "subtitle": "Tem alguma dúvida ou sugestão? Estamos aqui para ajudar!",
+  "aboutPage": {
+    "mission": {
+      "title": "Feedback que Transforma",
+      "description": "Estudos mostram que feedback direcionado aumenta a retenção de conhecimento em até <strong>75%</strong>. O Scribo não apenas corrige, mas ensina a estrutura e o estilo que faltam em sua escrita.",
+      "action": "Saiba Mais sobre a Metodologia →"
+    },
+    "vision": {
+      "title": "Foco na Produtividade",
+      "description": "Alunos que definem metas claras e tangíveis têm <strong>42%</strong> mais chances de alcançá-las. Gradus, nossa calculadora de notas, é a sua primeira etapa para um plano de estudos eficaz.",
+      "action": "Entenda a Importância da Meta →"
+    },
+    "stats": {
+      "students": "Estudantes Ajudados",
+      "improvement": "Melhoria nas Notas",
+      "support": "Suporte Disponível"
+    },
+    "values": {
+      "title": "Nossos Valores",
+      "results": "Resultados Reais",
+      "accessibility": "Acessibilidade",
+      "innovation": "Inovação Constante"
+    },
+    "differentials": {
+      "title": "Por que somos diferentes",
+      "results": {
+        "title": "Foco em Resultados",
+        "description": "Ferramentas que se adaptam ao seu estilo de aprendizado"
+      },
+      "ai": {
+        "title": "IA que Realmente Ajuda",
+        "description": "Tecnologia que ensina, orienta e acelera seu progresso"
+      },
+      "data": {
+        "title": "Dados Persistentes",
+        "description": "Seu progresso nunca se perde. Histórico completo, análises detalhadas e evolução contínua sempre disponíveis"
+      },
+      "gamification": {
+        "title": "Gamificação Inteligente",
+        "description": "Sistema de conquistas que motiva e recompensa cada avanço no seu aprendizado"
+      }
+    },
+    "technology": {
+      "title": "Tecnologia Avançada",
+      "description": "Utilizamos as mais recentes tecnologias de IA para criar uma experiência de aprendizado única e personalizada."
+    }
+  },
+  "contactPage": {
+    "title": "Fale Conosco",
+    "description": "Dúvidas, sugestões ou precisa de ajuda? Estamos aqui para acelerar seu sucesso acadêmico.",
     "form": {
       "name": "Nome",
       "email": "E-mail",
-      "subject": "Assunto",
+      "category": "Categoria",
+      "selectCategory": "Selecione uma categoria",
+      "support": "Suporte Técnico",
+      "suggestion": "Sugestão de Melhoria",
+      "bug": "Reportar Bug",
+      "partnership": "Parceria",
+      "other": "Outros",
       "message": "Mensagem",
+      "placeholder": "Descreva sua dúvida ou sugestão...",
+      "submitting": "Enviando...",
       "submit": "Enviar Mensagem"
     },
     "info": {
-      "email": "contato@cogni-ia.com",
-      "phone": "+55 (11) 99999-9999",
-      "address": "São Paulo, SP - Brasil"
+      "title": "Informações de Contato",
+      "email": "E-mail",
+      "emailValue": "contato@cogni-ia.com",
+      "chat": "Chat",
+      "chatValue": "Disponível no site",
+      "location": "Localização",
+      "locationValue": "Brasil"
+    },
+    "response": {
+      "title": "Tempo de Resposta",
+      "general": "Suporte Geral",
+      "generalTime": "24h",
+      "critical": "Bugs Críticos",
+      "criticalTime": "4h",
+      "partnerships": "Parcerias",
+      "partnershipsTime": "48h"
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "q1": "Quanto tempo leva para receber uma resposta?",
+      "a1": "Respondemos em até 24 horas durante dias úteis. Para questões urgentes, use nosso chat.",
+      "q2": "Posso sugerir novas funcionalidades?",
+      "a2": "Sim! Adoramos feedback dos usuários. Suas sugestões nos ajudam a melhorar constantemente.",
+      "q3": "Há suporte técnico disponível?",
+      "a3": "Oferecemos suporte completo via email e chat. Nossa equipe está pronta para ajudar."
     }
   },
   "common": {

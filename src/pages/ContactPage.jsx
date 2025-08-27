@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { Mail, MessageCircle, Clock, HelpCircle, Send, Phone, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 // Estado global para controlar se já animou na primeira visita
 let hasContactAnimated = false;
@@ -139,6 +140,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
 
 // Componente principal da página Contato
 const ContactPage = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -150,16 +152,16 @@ const ContactPage = () => {
 
   const faqData = [
     {
-      question: "Quanto tempo leva para receber uma resposta?",
-      answer: "Respondemos em até 24 horas durante dias úteis. Para questões urgentes, use nosso chat."
+      question: t('contactPage.faq.q1'),
+      answer: t('contactPage.faq.a1')
     },
     {
-      question: "Posso sugerir novas funcionalidades?",
-      answer: "Sim! Adoramos feedback dos usuários. Suas sugestões nos ajudam a melhorar constantemente."
+      question: t('contactPage.faq.q2'),
+      answer: t('contactPage.faq.a2')
     },
     {
-      question: "Há suporte técnico disponível?",
-      answer: "Oferecemos suporte completo via email e chat. Nossa equipe está pronta para ajudar."
+      question: t('contactPage.faq.q3'),
+      answer: t('contactPage.faq.a3')
     }
   ];
 
@@ -195,14 +197,14 @@ const ContactPage = () => {
             <Send size={32} />
           </div>
           <div className="card-content">
-            <h3 className="card-title">Fale Conosco</h3>
+            <h3 className="card-title">{t('contactPage.title')}</h3>
             <p className="card-description">
-              Dúvidas, sugestões ou precisa de ajuda? Estamos aqui para acelerar seu sucesso acadêmico.
+              {t('contactPage.description')}
             </p>
             
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name" className="form-label">Nome</label>
+                <label htmlFor="name" className="form-label">{t('contactPage.form.name')}</label>
                 <input
                   type="text"
                   id="name"
@@ -215,7 +217,7 @@ const ContactPage = () => {
               </div>
               
               <div className="form-group">
-                <label htmlFor="email" className="form-label">E-mail</label>
+                <label htmlFor="email" className="form-label">{t('contactPage.form.email')}</label>
                 <input
                   type="email"
                   id="email"
@@ -228,7 +230,7 @@ const ContactPage = () => {
               </div>
               
               <div className="form-group">
-                <label htmlFor="category" className="form-label">Categoria</label>
+                <label htmlFor="category" className="form-label">{t('contactPage.form.category')}</label>
                 <select
                   id="category"
                   name="category"
@@ -237,17 +239,17 @@ const ContactPage = () => {
                   className="form-input"
                   required
                 >
-                  <option value="">Selecione uma categoria</option>
-                  <option value="suporte">Suporte Técnico</option>
-                  <option value="sugestao">Sugestão de Melhoria</option>
-                  <option value="bug">Reportar Bug</option>
-                  <option value="parceria">Parceria</option>
-                  <option value="outros">Outros</option>
+                  <option value="">{t('contactPage.form.selectCategory')}</option>
+                  <option value="suporte">{t('contactPage.form.support')}</option>
+                  <option value="sugestao">{t('contactPage.form.suggestion')}</option>
+                  <option value="bug">{t('contactPage.form.bug')}</option>
+                  <option value="parceria">{t('contactPage.form.partnership')}</option>
+                  <option value="outros">{t('contactPage.form.other')}</option>
                 </select>
               </div>
               
               <div className="form-group">
-                <label htmlFor="message" className="form-label">Mensagem</label>
+                <label htmlFor="message" className="form-label">{t('contactPage.form.message')}</label>
                 <textarea
                   id="message"
                   name="message"
@@ -255,7 +257,7 @@ const ContactPage = () => {
                   onChange={handleInputChange}
                   rows={4}
                   className="form-input"
-                  placeholder="Descreva sua dúvida ou sugestão..."
+                  placeholder={t('contactPage.form.placeholder')}
                   required
                 ></textarea>
               </div>
@@ -265,7 +267,7 @@ const ContactPage = () => {
                 className={`contact-submit-btn ${isSubmitting ? 'submitting' : ''}`}
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
+                {isSubmitting ? t('contactPage.form.submitting') : t('contactPage.form.submit')}
                 <Send size={16} />
               </button>
             </form>
@@ -279,27 +281,27 @@ const ContactPage = () => {
             <Mail size={28} />
           </div>
           <div className="card-content">
-            <h3 className="card-title">Informações de Contato</h3>
+            <h3 className="card-title">{t('contactPage.info.title')}</h3>
             <div className="contact-info-list">
               <div className="contact-info-item">
                 <Mail size={16} />
                 <div>
-                  <span className="info-label">E-mail</span>
-                  <span className="info-value">contato@cogni-ia.com</span>
+                  <span className="info-label">{t('contactPage.info.email')}</span>
+                  <span className="info-value">{t('contactPage.info.emailValue')}</span>
                 </div>
               </div>
               <div className="contact-info-item">
                 <MessageCircle size={16} />
                 <div>
-                  <span className="info-label">Chat</span>
-                  <span className="info-value">Disponível no site</span>
+                  <span className="info-label">{t('contactPage.info.chat')}</span>
+                  <span className="info-value">{t('contactPage.info.chatValue')}</span>
                 </div>
               </div>
               <div className="contact-info-item">
                 <MapPin size={16} />
                 <div>
-                  <span className="info-label">Localização</span>
-                  <span className="info-value">Brasil</span>
+                  <span className="info-label">{t('contactPage.info.location')}</span>
+                  <span className="info-value">{t('contactPage.info.locationValue')}</span>
                 </div>
               </div>
             </div>
@@ -312,19 +314,19 @@ const ContactPage = () => {
             <Clock size={28} />
           </div>
           <div className="card-content">
-            <h3 className="card-title">Tempo de Resposta</h3>
+            <h3 className="card-title">{t('contactPage.response.title')}</h3>
             <div className="response-times">
               <div className="response-item">
-                <div className="response-type">Suporte Geral</div>
-                <div className="response-time">24h</div>
+                <div className="response-type">{t('contactPage.response.general')}</div>
+                <div className="response-time">{t('contactPage.response.generalTime')}</div>
               </div>
               <div className="response-item">
-                <div className="response-type">Bugs Críticos</div>
-                <div className="response-time">4h</div>
+                <div className="response-type">{t('contactPage.response.critical')}</div>
+                <div className="response-time">{t('contactPage.response.criticalTime')}</div>
               </div>
               <div className="response-item">
-                <div className="response-type">Parcerias</div>
-                <div className="response-time">48h</div>
+                <div className="response-type">{t('contactPage.response.partnerships')}</div>
+                <div className="response-time">{t('contactPage.response.partnershipsTime')}</div>
               </div>
             </div>
           </div>
@@ -336,7 +338,7 @@ const ContactPage = () => {
             <HelpCircle size={28} />
           </div>
           <div className="card-content">
-            <h3 className="card-title">Perguntas Frequentes</h3>
+            <h3 className="card-title">{t('contactPage.faq.title')}</h3>
             <div className="faq-list">
               {faqData.map((faq, index) => (
                 <FAQItem

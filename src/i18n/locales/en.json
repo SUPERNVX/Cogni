@@ -6,7 +6,8 @@
     "contact": "Contact"
   },
   "header": {
-    "logoText": "Cogni AI"
+    "logoText": "Cogni AI",
+    "logoAlt": "Cogni AI Logo"
   },
   "home": {
     "hero": {
@@ -33,85 +34,144 @@
       "subtitle": "Master your studies. Achieve your goals. Exceed your limits with tools that really work.",
       "primaryButton": "Get Started - It's Free",
       "secondaryButton": "Learn About Our Mission"
-    }
+    },
+    "splineLoading": "Preparing 3D experience...",
+    "splineError": "But don't worry, the content is still available below."
   },
-  "about": {
-    "title": "About Cogni AI",
-    "mission": {
-      "title": "Our Mission",
-      "description": "Democratize access to quality education through artificial intelligence, offering tools that enhance each student's learning potential."
-    },
-    "vision": {
-      "title": "Our Vision",
-      "description": "To be Brazil's leading educational AI platform, transforming how students learn and prepare for the future."
-    },
-    "stats": {
-      "title": "Our Numbers",
-      "students": "Active Students",
-      "schools": "Partner Schools",
-      "satisfaction": "Satisfaction",
-      "improvement": "Grade Improvement"
-    },
-    "values": {
-      "title": "Our Values",
-      "description": "Innovation, accessibility, and educational excellence guide every decision we make to create the future of education."
-    },
-    "differential": {
-      "title": "Our Advantage",
-      "description": "We combine cutting-edge technology with proven pedagogical methodologies, creating a unique and personalized learning experience."
-    },
-    "technology": {
-      "title": "Advanced Technology",
-      "description": "We use the latest innovations in AI and machine learning to provide instant and personalized feedback."
-    }
+  "languageSelector": {
+    "ariaLabel": "Select language",
+    "pt": "Portuguese",
+    "en": "English",
+    "es": "Spanish"
   },
-  "projects": {
-    "title": "Our Projects",
-    "feedback": {
+  "magicBento": {
+    "card1": {
       "title": "Transformative Feedback",
-      "description": "Studies show that targeted feedback increases knowledge retention by up to 75%. Scribo doesn't just correct, it teaches the structure and style missing from your writing.",
+      "description": "Studies show that targeted feedback increases knowledge retention by up to 75%. Scribo doesn't just correct, it teaches the structure and style your writing lacks.",
       "label": "Methodology",
-      "action": "Learn More About Our Methodology →"
+      "action": "Learn More About the Methodology →"
     },
-    "productivity": {
+    "card2": {
       "title": "Focus on Productivity",
-      "description": "Students who set clear and tangible goals are 42% more likely to achieve them. Gradus, our grade calculator, is your first step to an effective study plan.",
+      "description": "Students who set clear, tangible goals are 42% more likely to achieve them. Gradus, our grade calculator, is your first step toward an effective study plan.",
       "label": "Planning",
       "action": "Understand the Importance of Goals →"
     },
-    "scribo": {
+    "card3": {
       "title": "Scribo: Your AI Writing Assistant",
-      "description": "Optimize your essays with instant and intelligent feedback. Our AI analyzes and suggests improvements to help you achieve the maximum score.",
-      "label": "Smart Writing",
+      "description": "Optimize your essays with instant, intelligent feedback. Our AI analyzes and suggests improvements to help you achieve the highest score.",
+      "label": "Intelligent Writing",
       "action": "Try Scribo for Free →"
     },
-    "gradus": {
+    "card4": {
       "title": "Gradus: Strategic Planning",
-      "description": "Plan your study journey! With Gradus, you discover exactly how much you need on each test to reach your goals and stay on track.",
+      "description": "Plan your study journey! With Gradus, you'll find out exactly what you need on each test to meet your goals and stay on track.",
       "label": "Calculator",
       "action": "Calculate Your Goals Now →"
     },
-    "analysis": {
+    "card5": {
       "title": "Complete Analysis",
-      "description": "Receive detailed reports on your progress, identifying strengths and areas that need more attention in your studies.",
-      "label": "Reports",
-      "action": "View Your Reports →"
+      "description": "From grammar to textual cohesion, Scribo offers a complete analysis. Get clear suggestions for each paragraph and prepare for success.",
+      "label": "Detailed Analysis",
+      "action": "See an Example →"
+    },
+    "card6": {
+      "title": "Simulate Scenarios",
+      "description": "Try different grade combinations and see the impact on your final result. With Gradus, strategic planning is in the palm of your hand.",
+      "label": "Simulation",
+      "action": "Simulate and Plan →"
     }
   },
-  "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Have any questions or suggestions? We're here to help!",
+  "aboutPage": {
+    "mission": {
+      "title": "Transformative Feedback",
+      "description": "Studies show that targeted feedback increases knowledge retention by up to <strong>75%</strong>. Scribo doesn't just correct, it teaches the structure and style your writing lacks.",
+      "action": "Learn More About the Methodology →"
+    },
+    "vision": {
+      "title": "Focus on Productivity",
+      "description": "Students who set clear, tangible goals are <strong>42%</strong> more likely to achieve them. Gradus, our grade calculator, is your first step toward an effective study plan.",
+      "action": "Understand the Importance of Goals →"
+    },
+    "stats": {
+      "students": "Students Helped",
+      "improvement": "Grade Improvement",
+      "support": "Support Available"
+    },
+    "values": {
+      "title": "Our Values",
+      "results": "Real Results",
+      "accessibility": "Accessibility",
+      "innovation": "Constant Innovation"
+    },
+    "differentials": {
+      "title": "Why We're Different",
+      "results": {
+        "title": "Focus on Results",
+        "description": "Tools that adapt to your learning style"
+      },
+      "ai": {
+        "title": "AI That Really Helps",
+        "description": "Technology that teaches, guides, and accelerates your progress"
+      },
+      "data": {
+        "title": "Persistent Data",
+        "description": "Your progress is never lost. Complete history, detailed analysis, and continuous evolution always available"
+      },
+      "gamification": {
+        "title": "Intelligent Gamification",
+        "description": "An achievement system that motivates and rewards every step of your learning journey"
+      }
+    },
+    "technology": {
+      "title": "Advanced Technology",
+      "description": "We use the latest AI technologies to create a unique and personalized learning experience."
+    }
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "description": "Questions, suggestions, or need help? We're here to accelerate your academic success.",
     "form": {
       "name": "Name",
       "email": "Email",
-      "subject": "Subject",
+      "category": "Category",
+      "selectCategory": "Select a category",
+      "support": "Technical Support",
+      "suggestion": "Suggestion for Improvement",
+      "bug": "Report a Bug",
+      "partnership": "Partnership",
+      "other": "Other",
       "message": "Message",
+      "placeholder": "Describe your question or suggestion...",
+      "submitting": "Submitting...",
       "submit": "Send Message"
     },
     "info": {
-      "email": "contact@cogni-ai.com",
-      "phone": "+55 (11) 99999-9999",
-      "address": "São Paulo, SP - Brazil"
+      "title": "Contact Information",
+      "email": "Email",
+      "emailValue": "contact@cogni-ia.com",
+      "chat": "Chat",
+      "chatValue": "Available on the website",
+      "location": "Location",
+      "locationValue": "Brazil"
+    },
+    "response": {
+      "title": "Response Time",
+      "general": "General Support",
+      "generalTime": "24h",
+      "critical": "Critical Bugs",
+      "criticalTime": "4h",
+      "partnerships": "Partnerships",
+      "partnershipsTime": "48h"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How long does it take to get a response?",
+      "a1": "We respond within 24 hours on business days. For urgent matters, use our chat.",
+      "q2": "Can I suggest new features?",
+      "a2": "Yes! We love user feedback. Your suggestions help us improve constantly.",
+      "q3": "Is technical support available?",
+      "a3": "We offer full support via email and chat. Our team is ready to help."
     }
   },
   "common": {

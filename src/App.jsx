@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import cogniLogo from './assets/Cogni.png'; // Importando o novo logo
 
 import './style.css';
+import './components/Header.css';
 
 // Importação de componentes
 import GlassNavigation from './components/GlassNavigation';
@@ -23,7 +24,7 @@ const Header = () => {
     <div className="header-container">
       <div className="header-right-content">
         <div className="logo-container">
-          <img src={cogniLogo} alt="Cogni IA Logo" className="logo-image" />
+          <img src={cogniLogo} alt={t('header.logoAlt')} className="logo-image" />
           <span className="logo-text">{t('header.logoText')}</span>
         </div>
         <LanguageSelector />
@@ -42,12 +43,10 @@ const AppLayout = () => {
       <GlassNavigation position="top" />
       
       {isHomePage ? (
-        <>
+        <main className="main-content-spline">
           <Header />
-          <main className="main-content-spline">
-            <Outlet /> {/* Renderiza a página da rota aninhada */}
-          </main>
-        </>
+          <Outlet /> {/* Renderiza a página da rota aninhada */}
+        </main>
       ) : (
         <div className="main-content-wrapper">
           <Header />

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { Target, Eye, Star, TrendingUp, Users, Zap, Brain, Award } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 // Componente para números animados
 const AnimatedCounter = ({ end, duration = 2, suffix = "" }) => {
@@ -117,6 +118,8 @@ const AboutCard = ({ children, className = "", delay = 0, size = "normal" }) => 
 
 // Componente principal da página Sobre
 const AboutPage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="about-container">
       {/* Grid principal com layout bento */}
@@ -128,12 +131,10 @@ const AboutPage = () => {
             <Target size={32} />
           </div>
           <div className="card-content">
-            <h3 className="card-title">Feedback que Transforma</h3>
-            <p className="card-description">
-              Estudos mostram que feedback direcionado aumenta a retenção de conhecimento em até <strong>75%</strong>. O Scribo não apenas corrige, mas ensina a estrutura e o estilo que faltam em sua escrita.
-            </p>
+            <h3 className="card-title">{t('aboutPage.mission.title')}</h3>
+            <p className="card-description" dangerouslySetInnerHTML={{ __html: t('aboutPage.mission.description') }} />
             <span className="card-action-text">
-              Saiba Mais sobre a Metodologia →
+              {t('aboutPage.mission.action')}
             </span>
           </div>
           <div className="card-glow"></div>
@@ -145,12 +146,10 @@ const AboutPage = () => {
             <Eye size={32} />
           </div>
           <div className="card-content">
-            <h3 className="card-title">Foco na Produtividade</h3>
-            <p className="card-description">
-              Alunos que definem metas claras e tangíveis têm <strong>42%</strong> mais chances de alcançá-las. Gradus, nossa calculadora de notas, é a sua primeira etapa para um plano de estudos eficaz.
-            </p>
+            <h3 className="card-title">{t('aboutPage.vision.title')}</h3>
+            <p className="card-description" dangerouslySetInnerHTML={{ __html: t('aboutPage.vision.description') }} />
             <span className="card-action-text">
-              Entenda a Importância da Meta →
+              {t('aboutPage.vision.action')}
             </span>
           </div>
           <div className="card-glow"></div>
@@ -163,19 +162,19 @@ const AboutPage = () => {
               <div className="stat-number">
                 -
               </div>
-              <div className="stat-label">Estudantes Ajudados</div>
+              <div className="stat-label">{t('aboutPage.stats.students')}</div>
             </div>
             <div className="stat-item">
               <div className="stat-number">
                 até 50%
               </div>
-              <div className="stat-label">Melhoria nas Notas</div>
+              <div className="stat-label">{t('aboutPage.stats.improvement')}</div>
             </div>
             <div className="stat-item">
               <div className="stat-number">
                 <AnimatedCounter end={24} suffix="/7" />
               </div>
-              <div className="stat-label">Suporte Disponível</div>
+              <div className="stat-label">{t('aboutPage.stats.support')}</div>
             </div>
           </div>
         </AboutCard>
@@ -186,19 +185,19 @@ const AboutPage = () => {
             <Star size={28} />
           </div>
           <div className="card-content">
-            <h3 className="card-title">Nossos Valores</h3>
+            <h3 className="card-title">{t('aboutPage.values.title')}</h3>
             <div className="values-list">
               <div className="value-item">
                 <Award size={16} />
-                <span>Resultados Reais</span>
+                <span>{t('aboutPage.values.results')}</span>
               </div>
               <div className="value-item">
                 <Users size={16} />
-                <span>Acessibilidade</span>
+                <span>{t('aboutPage.values.accessibility')}</span>
               </div>
               <div className="value-item">
                 <Zap size={16} />
-                <span>Inovação Constante</span>
+                <span>{t('aboutPage.values.innovation')}</span>
               </div>
             </div>
           </div>
@@ -210,34 +209,34 @@ const AboutPage = () => {
             <Brain size={32} />
           </div>
           <div className="card-content">
-            <h3 className="card-title">Por que somos diferentes</h3>
+            <h3 className="card-title">{t('aboutPage.differentials.title')}</h3>
             <div className="differentials">
               <div className="differential-item">
                 <TrendingUp size={20} />
                 <div>
-                  <h4>Foco em Resultados</h4>
-                  <p>Ferramentas que se adaptam ao seu estilo de aprendizado</p>
+                  <h4>{t('aboutPage.differentials.results.title')}</h4>
+                  <p>{t('aboutPage.differentials.results.description')}</p>
                 </div>
               </div>
               <div className="differential-item">
                 <Brain size={20} />
                 <div>
-                  <h4>IA que Realmente Ajuda</h4>
-                  <p>Tecnologia que ensina, orienta e acelera seu progresso</p>
+                  <h4>{t('aboutPage.differentials.ai.title')}</h4>
+                  <p>{t('aboutPage.differentials.ai.description')}</p>
                 </div>
               </div>
               <div className="differential-item">
                 <Users size={20} />
                 <div>
-                  <h4>Dados Persistentes</h4>
-                  <p>Seu progresso nunca se perde. Histórico completo, análises detalhadas e evolução contínua sempre disponíveis</p>
+                  <h4>{t('aboutPage.differentials.data.title')}</h4>
+                  <p>{t('aboutPage.differentials.data.description')}</p>
                 </div>
               </div>
               <div className="differential-item">
                 <Award size={20} />
                 <div>
-                  <h4>Gamificação Inteligente</h4>
-                  <p>Sistema de conquistas que motiva e recompensa cada avanço no seu aprendizado</p>
+                  <h4>{t('aboutPage.differentials.gamification.title')}</h4>
+                  <p>{t('aboutPage.differentials.gamification.description')}</p>
                 </div>
               </div>
             </div>
@@ -250,9 +249,9 @@ const AboutPage = () => {
             <Zap size={28} />
           </div>
           <div className="card-content">
-            <h3 className="card-title">Tecnologia Avançada</h3>
+            <h3 className="card-title">{t('aboutPage.technology.title')}</h3>
             <p className="card-description">
-              Utilizamos as mais recentes tecnologias de IA para criar uma experiência de aprendizado única e personalizada.
+              {t('aboutPage.technology.description')}
             </p>
           </div>
           <div className="tech-particles"></div>

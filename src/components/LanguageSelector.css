@@ -83,6 +83,13 @@
 
 /* Mobile responsivo */
 @media (max-width: 768px) {
+  .language-selector {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+  }
+
   .language-button {
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;

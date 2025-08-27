@@ -6,7 +6,8 @@
     "contact": "Contacto"
   },
   "header": {
-    "logoText": "Cogni IA"
+    "logoText": "Cogni IA",
+    "logoAlt": "Logo de Cogni IA"
   },
   "home": {
     "hero": {
@@ -33,85 +34,144 @@
       "subtitle": "Domina tus estudios. Alcanza tus metas. Supera tus límites con herramientas que realmente funcionan.",
       "primaryButton": "Comenzar Ahora - Es Gratis",
       "secondaryButton": "Conoce Nuestra Misión"
-    }
+    },
+    "splineLoading": "Preparando experiencia 3D...",
+    "splineError": "Pero no te preocupes, el contenido sigue disponible a continuación."
   },
-  "about": {
-    "title": "Acerca de Cogni IA",
-    "mission": {
-      "title": "Nuestra Misión",
-      "description": "Democratizar el acceso a la educación de calidad a través de la inteligencia artificial, ofreciendo herramientas que potencian el aprendizaje de cada estudiante."
-    },
-    "vision": {
-      "title": "Nuestra Visión",
-      "description": "Ser la principal plataforma de IA educativa de Brasil, transformando la forma en que los estudiantes aprenden y se preparan para el futuro."
-    },
-    "stats": {
-      "title": "Nuestros Números",
-      "students": "Estudiantes Activos",
-      "schools": "Escuelas Asociadas",
-      "satisfaction": "Satisfacción",
-      "improvement": "Mejora en las Notas"
-    },
-    "values": {
-      "title": "Nuestros Valores",
-      "description": "La innovación, accesibilidad y excelencia educativa guían cada decisión que tomamos para crear el futuro de la educación."
-    },
-    "differential": {
-      "title": "Nuestro Diferencial",
-      "description": "Combinamos tecnología de vanguardia con metodologías pedagógicas comprobadas, creando una experiencia de aprendizaje única y personalizada."
-    },
-    "technology": {
-      "title": "Tecnología Avanzada",
-      "description": "Utilizamos las últimas innovaciones en IA y aprendizaje automático para ofrecer retroalimentación instantánea y personalizada."
-    }
+  "languageSelector": {
+    "ariaLabel": "Seleccionar idioma",
+    "pt": "Portugués",
+    "en": "Inglés",
+    "es": "Español"
   },
-  "projects": {
-    "title": "Nuestros Proyectos",
-    "feedback": {
-      "title": "Retroalimentación que Transforma",
-      "description": "Los estudios muestran que la retroalimentación dirigida aumenta la retención de conocimiento hasta en un 75%. Scribo no solo corrige, sino que enseña la estructura y el estilo que faltan en tu escritura.",
+  "magicBento": {
+    "card1": {
+      "title": "Feedback que Transforma",
+      "description": "Estudios demuestran que el feedback dirigido aumenta la retención de conocimientos hasta en un 75%. Scribo no solo corrige, sino que enseña la estructura y el estilo que le faltan a tu escritura.",
       "label": "Metodología",
-      "action": "Aprende Más sobre la Metodología →"
+      "action": "Aprende Más Sobre la Metodología →"
     },
-    "productivity": {
-      "title": "Enfoque en la Productividad",
+    "card2": {
+      "title": "Foco en la Productividad",
       "description": "Los estudiantes que establecen metas claras y tangibles tienen un 42% más de probabilidades de alcanzarlas. Gradus, nuestra calculadora de notas, es tu primer paso hacia un plan de estudios eficaz.",
       "label": "Planificación",
       "action": "Entiende la Importancia de las Metas →"
     },
-    "scribo": {
-      "title": "Scribo: Tu Asistente de Escritura IA",
-      "description": "Optimiza tus ensayos con retroalimentación instantánea e inteligente. Nuestra IA analiza y sugiere mejoras para ayudarte a alcanzar la puntuación máxima.",
+    "card3": {
+      "title": "Scribo: Tu Asistente de Escritura con IA",
+      "description": "Optimiza tus redacciones con feedback instantáneo e inteligente. Nuestra IA analiza y sugiere mejoras para que alcances la máxima puntuación.",
       "label": "Escritura Inteligente",
       "action": "Prueba Scribo Gratis →"
     },
-    "gradus": {
+    "card4": {
       "title": "Gradus: Planificación Estratégica",
-      "description": "¡Planifica tu viaje de estudios! Con Gradus, descubres exactamente cuánto necesitas en cada examen para alcanzar tus objetivos y mantenerte en el camino correcto.",
+      "description": "¡Planifica tu percorso de estudios! Con Gradus, descubres exactamente cuánto necesitas en cada examen para alcanzar tus objetivos y mantenerte en el camino correcto.",
       "label": "Calculadora",
       "action": "Calcula Tus Metas Ahora →"
     },
-    "analysis": {
+    "card5": {
       "title": "Análisis Completo",
-      "description": "Recibe informes detallados sobre tu progreso, identificando fortalezas y áreas que necesitan más atención en tus estudios.",
-      "label": "Informes",
-      "action": "Ve Tus Informes →"
+      "description": "Desde la gramática hasta la cohesión textual, Scribo ofrece un análisis completo. Recibe sugerencias claras para cada párrafo y prepárate para el éxito.",
+      "label": "Análisis Detallado",
+      "action": "Ver un Ejemplo →"
+    },
+    "card6": {
+      "title": "Simula Escenarios",
+      "description": "Prueba diferentes combinaciones de notas y ve el impacto en tu resultado final. Con Gradus, la planificación estratégica está en la palma de tu mano.",
+      "label": "Simulación",
+      "action": "Simula y Planifica →"
     }
   },
-  "contact": {
-    "title": "Ponte en Contacto",
-    "subtitle": "¿Tienes alguna pregunta o sugerencia? ¡Estamos aquí para ayudar!",
+  "aboutPage": {
+    "mission": {
+      "title": "Feedback que Transforma",
+      "description": "Estudios demuestran que el feedback dirigido aumenta la retención de conocimientos hasta en un <strong>75%</strong>. Scribo no solo corrige, sino que enseña la estructura y el estilo que le faltan a tu escritura.",
+      "action": "Aprende Más Sobre la Metodología →"
+    },
+    "vision": {
+      "title": "Foco en la Productividad",
+      "description": "Los estudiantes que establecen metas claras y tangibles tienen un <strong>42%</strong> más de probabilidades de alcanzarlas. Gradus, nuestra calculadora de notas, es tu primer paso hacia un plan de estudios eficaz.",
+      "action": "Entiende la Importancia de las Metas →"
+    },
+    "stats": {
+      "students": "Estudiantes Ayudados",
+      "improvement": "Mejora en las Notas",
+      "support": "Soporte Disponible"
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "results": "Resultados Reales",
+      "accessibility": "Accesibilidad",
+      "innovation": "Innovación Constante"
+    },
+    "differentials": {
+      "title": "Por qué somos diferentes",
+      "results": {
+        "title": "Foco en los Resultados",
+        "description": "Herramientas que se adaptan a tu estilo de aprendizaje"
+      },
+      "ai": {
+        "title": "IA que Realmente Ayuda",
+        "description": "Tecnología que enseña, orienta y acelera tu progreso"
+      },
+      "data": {
+        "title": "Datos Persistentes",
+        "description": "Tu progreso nunca se pierde. Historial completo, análisis detallados y evolución continua siempre disponibles"
+      },
+      "gamification": {
+        "title": "Gamificación Inteligente",
+        "description": "Un sistema de logros que motiva y recompensa cada avance en tu aprendizaje"
+      }
+    },
+    "technology": {
+      "title": "Tecnología Avanzada",
+      "description": "Utilizamos las últimas tecnologías de IA para crear una experiencia de aprendizaje única y personalizada."
+    }
+  },
+  "contactPage": {
+    "title": "Contáctanos",
+    "description": "¿Dudas, sugerencias o necesitas ayuda? Estamos aquí para acelerar tu éxito académico.",
     "form": {
       "name": "Nombre",
       "email": "Correo Electrónico",
-      "subject": "Asunto",
+      "category": "Categoría",
+      "selectCategory": "Selecciona una categoría",
+      "support": "Soporte Técnico",
+      "suggestion": "Sugerencia de Mejora",
+      "bug": "Reportar un Error",
+      "partnership": "Colaboración",
+      "other": "Otro",
       "message": "Mensaje",
+      "placeholder": "Describe tu duda o sugerencia...",
+      "submitting": "Enviando...",
       "submit": "Enviar Mensaje"
     },
     "info": {
-      "email": "contacto@cogni-ia.com",
-      "phone": "+55 (11) 99999-9999",
-      "address": "São Paulo, SP - Brasil"
+      "title": "Información de Contacto",
+      "email": "Correo Electrónico",
+      "emailValue": "contacto@cogni-ia.com",
+      "chat": "Chat",
+      "chatValue": "Disponible en el sitio web",
+      "location": "Ubicación",
+      "locationValue": "Brasil"
+    },
+    "response": {
+      "title": "Tiempo de Respuesta",
+      "general": "Soporte General",
+      "generalTime": "24h",
+      "critical": "Errores Críticos",
+      "criticalTime": "4h",
+      "partnerships": "Colaboraciones",
+      "partnershipsTime": "48h"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": "¿Cuánto tiempo se tarda en recibir una respuesta?",
+      "a1": "Respondemos en un plazo de 24 horas en días laborables. Para asuntos urgentes, utiliza nuestro chat.",
+      "q2": "¿Puedo sugerir nuevas funcionalidades?",
+      "a2": "¡Sí! Nos encantan los comentarios de los usuarios. Tus sugerencias nos ayudan a mejorar constantemente.",
+      "q3": "¿Hay soporte técnico disponible?",
+      "a3": "Ofrecemos soporte completo por correo electrónico y chat. Nuestro equipo está listo para ayudar."
     }
   },
   "common": {
