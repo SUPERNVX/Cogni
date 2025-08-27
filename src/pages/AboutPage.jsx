@@ -181,7 +181,7 @@ const AboutPage = () => {
 
         {/* Card de Valores */}
         <AboutCard delay={0.4}>
-          <div className="card-icon">
+          <div className="card-.icon">
             <Star size={28} />
           </div>
           <div className="card-content">
