@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "header": {
+    "logoText": "Cogni AI"
+  },
+  "home": {
+    "hero": {
+      "title": "Why choose Cogni AI?",
+      "subtitle": "Stop wasting time with outdated methods. Our AI tools were created specifically for students and schools that want real results...",
+      "description": "Improve your grades, enhance your writing, and organize your studies with technology that understands your academic needs."
+    },
+    "widgets": {
+      "scribo": {
+        "title": "Scribo",
+        "badge": "Advanced AI",
+        "description": "Master the art of writing! Get instant corrections and personalized feedback for essays and college entrance exams. Your perfect score is closer than you think.",
+        "action": "Start Writing Better →"
+      },
+      "calculator": {
+        "title": "Grade Calculator",
+        "badge": "Planning",
+        "description": "Never be caught off guard again! Calculate exactly what you need to score on upcoming tests to reach your goal. Plan your academic success with precision.",
+        "action": "Plan Your Grades Now →"
+      }
+    },
+    "cta": {
+      "title": "Ready to transform your studies?",
+      "subtitle": "Master your studies. Achieve your goals. Exceed your limits with tools that really work.",
+      "primaryButton": "Get Started - It's Free",
+      "secondaryButton": "Learn About Our Mission"
+    }
+  },
+  "about": {
+    "title": "About Cogni AI",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Democratize access to quality education through artificial intelligence, offering tools that enhance each student's learning potential."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be Brazil's leading educational AI platform, transforming how students learn and prepare for the future."
+    },
+    "stats": {
+      "title": "Our Numbers",
+      "students": "Active Students",
+      "schools": "Partner Schools",
+      "satisfaction": "Satisfaction",
+      "improvement": "Grade Improvement"
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "Innovation, accessibility, and educational excellence guide every decision we make to create the future of education."
+    },
+    "differential": {
+      "title": "Our Advantage",
+      "description": "We combine cutting-edge technology with proven pedagogical methodologies, creating a unique and personalized learning experience."
+    },
+    "technology": {
+      "title": "Advanced Technology",
+      "description": "We use the latest innovations in AI and machine learning to provide instant and personalized feedback."
+    }
+  },
+  "projects": {
+    "title": "Our Projects",
+    "feedback": {
+      "title": "Transformative Feedback",
+      "description": "Studies show that targeted feedback increases knowledge retention by up to 75%. Scribo doesn't just correct, it teaches the structure and style missing from your writing.",
+      "label": "Methodology",
+      "action": "Learn More About Our Methodology →"
+    },
+    "productivity": {
+      "title": "Focus on Productivity",
+      "description": "Students who set clear and tangible goals are 42% more likely to achieve them. Gradus, our grade calculator, is your first step to an effective study plan.",
+      "label": "Planning",
+      "action": "Understand the Importance of Goals →"
+    },
+    "scribo": {
+      "title": "Scribo: Your AI Writing Assistant",
+      "description": "Optimize your essays with instant and intelligent feedback. Our AI analyzes and suggests improvements to help you achieve the maximum score.",
+      "label": "Smart Writing",
+      "action": "Try Scribo for Free →"
+    },
+    "gradus": {
+      "title": "Gradus: Strategic Planning",
+      "description": "Plan your study journey! With Gradus, you discover exactly how much you need on each test to reach your goals and stay on track.",
+      "label": "Calculator",
+      "action": "Calculate Your Goals Now →"
+    },
+    "analysis": {
+      "title": "Complete Analysis",
+      "description": "Receive detailed reports on your progress, identifying strengths and areas that need more attention in your studies.",
+      "label": "Reports",
+      "action": "View Your Reports →"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have any questions or suggestions? We're here to help!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "info": {
+      "email": "contact@cogni-ai.com",
+      "phone": "+55 (11) 99999-9999",
+      "address": "São Paulo, SP - Brazil"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Oops! Something went wrong.",
+    "tryAgain": "Try Again",
+    "close": "Close"
+  }
+}

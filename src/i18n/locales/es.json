@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "header": {
+    "logoText": "Cogni IA"
+  },
+  "home": {
+    "hero": {
+      "title": "¿Por qué elegir Cogni IA?",
+      "subtitle": "Deja de perder tiempo con métodos obsoletos. Nuestras herramientas de IA fueron creadas específicamente para estudiantes y escuelas que quieren resultados reales...",
+      "description": "Mejora tus calificaciones, perfecciona tu escritura y organiza tus estudios con tecnología que entiende tus necesidades académicas."
+    },
+    "widgets": {
+      "scribo": {
+        "title": "Scribo",
+        "badge": "IA Avanzada",
+        "description": "¡Domina el arte de escribir! Recibe correcciones instantáneas y retroalimentación personalizada para ensayos y exámenes de ingreso. Tu puntuación perfecta está más cerca de lo que imaginas.",
+        "action": "Comienza a Escribir Mejor →"
+      },
+      "calculator": {
+        "title": "Calculadora de Notas",
+        "badge": "Planificación",
+        "description": "¡Nunca más te pillen desprevenido! Calcula exactamente lo que necesitas obtener en los próximos exámenes para alcanzar tu meta. Planifica tu éxito académico con precisión.",
+        "action": "Planifica Tus Notas Ahora →"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para transformar tus estudios?",
+      "subtitle": "Domina tus estudios. Alcanza tus metas. Supera tus límites con herramientas que realmente funcionan.",
+      "primaryButton": "Comenzar Ahora - Es Gratis",
+      "secondaryButton": "Conoce Nuestra Misión"
+    }
+  },
+  "about": {
+    "title": "Acerca de Cogni IA",
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Democratizar el acceso a la educación de calidad a través de la inteligencia artificial, ofreciendo herramientas que potencian el aprendizaje de cada estudiante."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "description": "Ser la principal plataforma de IA educativa de Brasil, transformando la forma en que los estudiantes aprenden y se preparan para el futuro."
+    },
+    "stats": {
+      "title": "Nuestros Números",
+      "students": "Estudiantes Activos",
+      "schools": "Escuelas Asociadas",
+      "satisfaction": "Satisfacción",
+      "improvement": "Mejora en las Notas"
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "description": "La innovación, accesibilidad y excelencia educativa guían cada decisión que tomamos para crear el futuro de la educación."
+    },
+    "differential": {
+      "title": "Nuestro Diferencial",
+      "description": "Combinamos tecnología de vanguardia con metodologías pedagógicas comprobadas, creando una experiencia de aprendizaje única y personalizada."
+    },
+    "technology": {
+      "title": "Tecnología Avanzada",
+      "description": "Utilizamos las últimas innovaciones en IA y aprendizaje automático para ofrecer retroalimentación instantánea y personalizada."
+    }
+  },
+  "projects": {
+    "title": "Nuestros Proyectos",
+    "feedback": {
+      "title": "Retroalimentación que Transforma",
+      "description": "Los estudios muestran que la retroalimentación dirigida aumenta la retención de conocimiento hasta en un 75%. Scribo no solo corrige, sino que enseña la estructura y el estilo que faltan en tu escritura.",
+      "label": "Metodología",
+      "action": "Aprende Más sobre la Metodología →"
+    },
+    "productivity": {
+      "title": "Enfoque en la Productividad",
+      "description": "Los estudiantes que establecen metas claras y tangibles tienen un 42% más de probabilidades de alcanzarlas. Gradus, nuestra calculadora de notas, es tu primer paso hacia un plan de estudios eficaz.",
+      "label": "Planificación",
+      "action": "Entiende la Importancia de las Metas →"
+    },
+    "scribo": {
+      "title": "Scribo: Tu Asistente de Escritura IA",
+      "description": "Optimiza tus ensayos con retroalimentación instantánea e inteligente. Nuestra IA analiza y sugiere mejoras para ayudarte a alcanzar la puntuación máxima.",
+      "label": "Escritura Inteligente",
+      "action": "Prueba Scribo Gratis →"
+    },
+    "gradus": {
+      "title": "Gradus: Planificación Estratégica",
+      "description": "¡Planifica tu viaje de estudios! Con Gradus, descubres exactamente cuánto necesitas en cada examen para alcanzar tus objetivos y mantenerte en el camino correcto.",
+      "label": "Calculadora",
+      "action": "Calcula Tus Metas Ahora →"
+    },
+    "analysis": {
+      "title": "Análisis Completo",
+      "description": "Recibe informes detallados sobre tu progreso, identificando fortalezas y áreas que necesitan más atención en tus estudios.",
+      "label": "Informes",
+      "action": "Ve Tus Informes →"
+    }
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "¿Tienes alguna pregunta o sugerencia? ¡Estamos aquí para ayudar!",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje"
+    },
+    "info": {
+      "email": "contacto@cogni-ia.com",
+      "phone": "+55 (11) 99999-9999",
+      "address": "São Paulo, SP - Brasil"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "¡Ups! Algo salió mal.",
+    "tryAgain": "Intentar de Nuevo",
+    "close": "Cerrar"
+  }
+}

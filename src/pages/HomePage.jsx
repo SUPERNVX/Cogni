@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Spline from '@splinetool/react-spline';
@@ -10,6 +11,7 @@ import './HomePage.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const splineContainerRef = useRef(null);
   const scrollContentRef = useRef(null);
@@ -152,10 +154,10 @@ const HomePage = () => {
         {splineError && (
           <div className="spline-error">
             <div className="spline-error-content">
-              <h3>Ops! Problema ao carregar a cena 3D</h3>
+              <h3>{t('common.error')}</h3>
               <p>Mas não se preocupe, o conteúdo continua disponível abaixo.</p>
               <button onClick={() => window.location.reload()} className="spline-retry-button">
-                Tentar Novamente
+                {t('common.tryAgain')}
               </button>
             </div>
           </div>
@@ -212,47 +214,47 @@ const HomePage = () => {
               {/* Conteúdo inicial visível */}
               <div className="glass-widget-initial">
                 <div className="glass-widget-title">
-                  <h2>Por que escolher a Cogni IA?</h2>
+                  <h2>{t('home.hero.title')}</h2>
                 </div>
                 <div className="glass-widget-text-preview">
-                  <p>Pare de perder tempo com métodos ultrapassados. Nossas ferramentas de IA foram criadas especificamente para estudantes e escolas que querem resultados reais...</p>
+                  <p>{t('home.hero.subtitle')}</p>
                 </div>
               </div>
 
               {/* Conteúdo expandido que aparece no scroll */}
               <div className="glass-widget-expanded">
                 <div className="glass-widget-full-text">
-                  <p>Melhore suas notas, aprimore sua escrita e organize seus estudos com tecnologia que entende suas necessidades acadêmicas.</p>
+                  <p>{t('home.hero.description')}</p>
                 </div>
 
                 {/* Widgets Scribo e Calculadora sobre o vidro */}
                 <div className="overlay-widgets-container">
                   <div className="overlay-widget scribo-widget">
                     <div className="widget-header">
-                      <p className="widget-title">Scribo</p>
-                      <span className="badge badge-blue">IA Avançada</span>
+                      <p className="widget-title">{t('home.widgets.scribo.title')}</p>
+                      <span className="badge badge-blue">{t('home.widgets.scribo.badge')}</span>
                     </div>
                     <p className="widget-text">
-                      Domine a arte da escrita! Receba correções instantâneas e feedback personalizado para redações do ENEM e vestibulares. Sua nota 1000 está mais próxima do que imagina.
+                      {t('home.widgets.scribo.description')}
                     </p>
                     <div className="widget-link-container">
                       <a href="#" className="widget-link">
-                        Comece a Escrever Melhor &rarr;
+                        {t('home.widgets.scribo.action')}
                       </a>
                     </div>
                   </div>
 
                   <div className="overlay-widget calculadora-widget">
                     <div className="widget-header">
-                      <p className="widget-title">Calculadora de Notas</p>
-                      <span className="badge badge-green">Planejamento</span>
+                      <p className="widget-title">{t('home.widgets.calculator.title')}</p>
+                      <span className="badge badge-green">{t('home.widgets.calculator.badge')}</span>
                     </div>
                     <p className="widget-text">
-                      Nunca mais seja pego de surpresa! Calcule exatamente o que precisa tirar nas próximas provas para atingir sua meta. Planeje seu sucesso acadêmico com precisão.
+                      {t('home.widgets.calculator.description')}
                     </p>
                     <div className="widget-link-container">
                       <a href="#" className="widget-link">
-                        Planeje Suas Notas Agora &rarr;
+                        {t('home.widgets.calculator.action')}
                       </a>
                     </div>
                   </div>
@@ -265,22 +267,22 @@ const HomePage = () => {
         {/* Seção final com call-to-action */}
         <section className="spline-cta-section">
           <div className="spline-cta-content">
-            <h2 className="spline-cta-title">Pronto para transformar seus estudos?</h2>
+            <h2 className="spline-cta-title">{t('home.cta.title')}</h2>
             <p className="spline-cta-text">
-              Domine seus estudos. Alcance suas metas. Supere seus limites com ferramentas que realmente funcionam.
+              {t('home.cta.subtitle')}
             </p>
             <div className="spline-cta-buttons">
               <button
                 onClick={() => navigate('/projects')}
                 className="main-button primary-button spline-cta-button"
               >
-                Começar Agora - É Grátis
+                {t('home.cta.primaryButton')}
               </button>
               <button
                 onClick={() => navigate('/about')}
                 className="main-button secondary-button spline-cta-button"
               >
-                Conheça Nossa Missão
+                {t('home.cta.secondaryButton')}
               </button>
             </div>
           </div>

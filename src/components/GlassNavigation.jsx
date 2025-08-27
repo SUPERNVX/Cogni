@@ -1,14 +1,17 @@
 import { Home, NotebookPen, Brain, SquareGanttChart, Mail } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import GlassSurface from './GlassSurface';
 import './GlassNavigation.css';
 
 const GlassNavigation = ({ position = 'bottom' }) => {
+  const { t } = useTranslation();
+  
   const navItems = [
-    { name: 'Home', path: '/', icon: <Home size={22} /> },
-    { name: 'Sobre', path: '/about', icon: <Brain size={22} /> },
-    { name: 'Projetos', path: '/projects', icon: <SquareGanttChart size={22} /> },
-    { name: 'Contato', path: '/contact', icon: <Mail size={22} /> },
+    { name: t('nav.home'), path: '/', icon: <Home size={22} /> },
+    { name: t('nav.about'), path: '/about', icon: <Brain size={22} /> },
+    { name: t('nav.projects'), path: '/projects', icon: <SquareGanttChart size={22} /> },
+    { name: t('nav.contact'), path: '/contact', icon: <Mail size={22} /> },
   ];
 
   return (

@@ -1,11 +1,13 @@
 import { useEffect, Suspense, lazy } from 'react';
 import { Routes, Route, useLocation, Outlet } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import cogniLogo from './assets/Cogni.png'; // Importando o novo logo
 
 import './style.css';
 
 // Importação de componentes
 import GlassNavigation from './components/GlassNavigation';
+import LanguageSelector from './components/LanguageSelector';
 
 // Importação dinâmica (Lazy Loading) das páginas
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -14,16 +16,21 @@ const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 // Componente de Header reutilizável - ATUALIZADO
-const Header = () => (
-  <div className="header-container">
-    <div className="header-right-content">
-      <div className="logo-container">
-        <img src={cogniLogo} alt="Cogni IA Logo" className="logo-image" />
-        <span className="logo-text">Cogni IA</span>
+const Header = () => {
+  const { t } = useTranslation();
+  
+  return (
+    <div className="header-container">
+      <div className="header-right-content">
+        <div className="logo-container">
+          <img src={cogniLogo} alt="Cogni IA Logo" className="logo-image" />
+          <span className="logo-text">{t('header.logoText')}</span>
+        </div>
+        <LanguageSelector />
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 // Componente de Layout que define a estrutura da página
 const AppLayout = () => {
@@ -55,6 +62,8 @@ const AppLayout = () => {
 
 // Componente principal da aplicação - ATUALIZADO
 const App = () => {
+  const { t } = useTranslation();
+  
   const loadingFallback = (
     <div style={{ 
       display: 'flex', 
@@ -65,7 +74,7 @@ const App = () => {
       background: 'var(--color-background)',
       color: 'var(--color-text-primary)' 
     }}>
-      <p>Carregando...</p>
+      <p>{t('common.loading')}</p>
     </div>
   );
 
