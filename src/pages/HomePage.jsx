@@ -38,17 +38,36 @@ const HomePage = () => {
         }
       });
 
-      // Animação para o widget de vidro principal
-      gsap.from(".glass-widget-main", {
-        scaleX: 0.1,
-        scaleY: 0.8,
-        opacity: 0,
-        duration: 1.5,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: ".glass-widget-main",
-          start: 'top 95%',
-          toggleActions: 'play none none none',
+      ScrollTrigger.matchMedia({
+        "(min-width: 769px)": function() {
+          // Animação para o widget de vidro principal
+          gsap.from(".glass-widget-main", {
+            scaleX: 0.1,
+            scaleY: 0.8,
+            opacity: 0,
+            duration: 1.5,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: ".glass-widget-main",
+              start: 'top 95%',
+              toggleActions: 'play none none none',
+            }
+          });
+        },
+        "(max-width: 768px)": function() {
+          // Animação para o widget de vidro principal
+          gsap.from(".glass-widget-main", {
+            scaleX: 0.1,
+            scaleY: 0.8,
+            opacity: 0,
+            duration: 1.5,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: ".glass-widget-main",
+              start: 'top 100%', // Alterado para aparecer mais cedo no mobile
+              toggleActions: 'play none none none',
+            }
+          });
         }
       });
 
