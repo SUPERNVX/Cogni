@@ -1,3 +1,12 @@
+.glass-surface-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 260ms ease-out;
+}
+
 .glass-nav-container {
   position: fixed;
   left: 50%;
@@ -15,8 +24,8 @@
 }
 
 .glass-nav-surface {
-  width: auto !important;
   height: 66px !important;
+  width: 500px;
 }
 
 .glass-nav-content {
@@ -24,13 +33,13 @@
   align-items: center;
   justify-content: center;
   padding: 0 20px;
-  gap: 15px;
+  gap: 10px;
 }
 
 .glass-nav-items {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .glass-nav-button {
