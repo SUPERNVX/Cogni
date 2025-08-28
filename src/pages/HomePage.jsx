@@ -47,7 +47,7 @@ const HomePage = () => {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: ".glass-widget-main",
-          start: 'top 90%',
+          start: 'top 95%',
           toggleActions: 'play none none none',
         }
       });

@@ -420,7 +420,7 @@
   }
   
   .overlay-widget {
-    width: 95%; /* Aumentado para tocar quase a borda */
+    width: 100%; /* Aumentado para tocar quase a borda */
     max-width: none; /* Removido limite para usar toda largura */
     margin: 0 auto;
     padding: 1rem;
