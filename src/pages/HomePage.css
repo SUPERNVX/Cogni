@@ -420,12 +420,12 @@
   }
   
   .overlay-widget {
-    width: 100vw; 
+    width: 95%; 
     max-width: none; 
-    margin: 0;
-    padding: 1rem;
+    margin: 0 auto;
+    padding: 1.5rem;
     box-sizing: border-box;
-    border-radius: 0;
+    border-radius: 16px;
   }
   
   /* Reduzir texto dos widgets secundários */

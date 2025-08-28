@@ -64,7 +64,7 @@ const HomePage = () => {
             ease: 'power3.out',
             scrollTrigger: {
               trigger: ".glass-widget-main",
-              start: 'top 100%', // Alterado para aparecer mais cedo no mobile
+              start: 'top 120%', // Alterado para aparecer mais cedo no mobile
               toggleActions: 'play none none none',
             }
           });
