@@ -56,7 +56,7 @@ const DesktopNavigation = () => {
         width={500}
         height={66}
         borderRadius={20}
-        className="glass-nav-surface"
+        className="desktop-nav-surface"
         blur={20}
         displace={1.5}
         redOffset={0}

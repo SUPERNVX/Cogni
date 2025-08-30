@@ -25,6 +25,9 @@
 
 .glass-nav-surface {
   height: 66px !important;
+}
+
+.desktop-nav-surface {
   width: 500px;
 }
 
@@ -132,18 +135,18 @@
   }
   
   .glass-nav-content {
-    padding: 0 15px;
-    gap: 12px;
+    padding: 0 10px;
+    gap: 8px;
   }
   
   .glass-nav-items {
-    gap: 12px;
+    gap: 8px;
   }
   
   .glass-nav-button,
   .glass-profile-button {
-    min-width: 55px;
-    padding: 8px 12px;
+    min-width: 50px;
+    padding: 6px 10px;
   }
   
   .glass-nav-text {
