@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { Target, Eye, Star, TrendingUp, Users, Zap, Brain, Award } from 'lucide-react';
+import { Target, Eye, Star, TrendingUp, Users, Zap, Brain, Award, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 // Componente para números animados
 const AnimatedCounter = ({ end, duration = 2, suffix = "" }) => {
@@ -119,6 +120,7 @@ const AboutCard = ({ children, className = "", delay = 0, size = "normal" }) => 
 // Componente principal da página Sobre
 const AboutPage = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <div className="about-container">
@@ -179,26 +181,38 @@ const AboutPage = () => {
           </div>
         </AboutCard>
 
-        {/* Card de Valores */}
+        {/* Card de Quem Somos */}
         <AboutCard delay={0.4}>
-          <div className="card-.icon">
+          <div className="card-icon">
             <Star size={28} />
           </div>
           <div className="card-content">
             <h3 className="card-title">{t('aboutPage.values.title')}</h3>
             <div className="values-list">
-              <div className="value-item">
+              <button 
+                className="value-button"
+                onClick={() => navigate('/mission')}
+              >
                 <Award size={16} />
                 <span>{t('aboutPage.values.results')}</span>
-              </div>
-              <div className="value-item">
-                <Users size={16} />
+                <ArrowRight size={14} className="arrow-icon" />
+              </button>
+              <button 
+                className="value-button"
+                onClick={() => navigate('/vision')}
+              >
+                <Eye size={16} />
                 <span>{t('aboutPage.values.accessibility')}</span>
-              </div>
-              <div className="value-item">
+                <ArrowRight size={14} className="arrow-icon" />
+              </button>
+              <button 
+                className="value-button"
+                onClick={() => navigate('/values')}
+              >
                 <Zap size={16} />
                 <span>{t('aboutPage.values.innovation')}</span>
-              </div>
+                <ArrowRight size={14} className="arrow-icon" />
+              </button>
             </div>
           </div>
         </AboutCard>

@@ -42,7 +42,8 @@
     "ariaLabel": "Seleccionar idioma",
     "pt": "Portugués",
     "en": "Inglés",
-    "es": "Español"
+    "es": "Español",
+    "ru": "Ruso"
   },
   "magicBento": {
     "card1": {
@@ -126,6 +127,81 @@
     "technology": {
       "title": "Tecnología Avanzada",
       "description": "Utilizamos las últimas tecnologías de IA para crear una experiencia de aprendizaje única y personalizada."
+    },
+    "missionPage": {
+      "title": "Nuestra Misión",
+      "subtitle": "Transformar la educación a través de la inteligencia artificial",
+      "content": "Nuestra misión es democratizar el acceso a una educación de calidad, utilizando inteligencia artificial para ofrecer retroalimentación personalizada y orientación académica precisa. Creemos que cada estudiante merece tener las mejores herramientas para alcanzar su máximo potencial.",
+      "values": [
+        {
+          "title": "Excelencia Académica",
+          "description": "Buscamos constantemente la mejora continua de nuestros algoritmos para ofrecer la retroalimentación más precisa y útil posible."
+        },
+        {
+          "title": "Accesibilidad Universal",
+          "description": "Desarrollamos herramientas que pueden ser utilizadas por todos, independientemente de sus limitaciones o recursos disponibles."
+        },
+        {
+          "title": "Transparencia",
+          "description": "Mantenemos a nuestros usuarios informados sobre cómo funciona nuestra tecnología y cómo utilizamos sus datos."
+        }
+      ]
+    },
+    "visionPage": {
+      "title": "Nuestra Visión",
+      "subtitle": "Un futuro donde la tecnología potencia el aprendizaje humano",
+      "content": "Visualizamos un mundo donde la inteligencia artificial trabaja en armonía con la creatividad humana, creando un ambiente de aprendizaje personalizado y eficaz. Nuestra visión es ser el puente entre la tecnología avanzada y el desarrollo educativo, haciendo que el éxito académico sea accesible para todos.",
+      "goals": [
+        {
+          "title": "Personalización Completa",
+          "description": "Desarrollar sistemas que se adapten completamente al estilo de aprendizaje único de cada estudiante."
+        },
+        {
+          "title": "Impacto Global",
+          "description": "Expandir nuestra tecnología para alcanzar estudiantes en todo el mundo, rompiendo barreras geográficas y socioeconómicas."
+        },
+        {
+          "title": "Innovación Continua",
+          "description": "Mantenernos a la vanguardia de la tecnología educativa, siempre explorando nuevas posibilidades."
+        }
+      ]
+    },
+    "valuesPage": {
+      "title": "Nuestros Valores",
+      "subtitle": "Los principios que guían cada decisión que tomamos",
+      "content": "Nuestros valores son la base de todo lo que hacemos. Guían nuestro desarrollo de productos, nuestras interacciones con usuarios y nuestra visión de futuro. Cada funcionalidad es creada con estos principios en mente.",
+      "coreValues": [
+        {
+          "title": "Resultados Reales",
+          "description": "Nos enfocamos en crear impacto medible en la vida académica de los estudiantes. Cada característica se desarrolla con el objetivo de generar mejoras concretas en el rendimiento.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Accesibilidad",
+          "description": "Creemos que la educación de calidad debe ser accesible para todos. Desarrollamos herramientas inclusivas que atienden diferentes necesidades y contextos.",
+          "icon": "Users"
+        },
+        {
+          "title": "Innovación Constante",
+          "description": "Siempre estamos explorando nuevas tecnologías y metodologías para mejorar la experiencia educativa. La innovación es parte de nuestro ADN.",
+          "icon": "Zap"
+        },
+        {
+          "title": "Ética y Privacidad",
+          "description": "Respetamos la privacidad de nuestros usuarios y operamos con total transparencia sobre cómo utilizamos los datos educativos.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Colaboración",
+          "description": "Valoramos la retroalimentación de la comunidad educativa y trabajamos en conjunto con profesores y estudiantes para crear soluciones más eficaces.",
+          "icon": "Heart"
+        },
+        {
+          "title": "Excelencia Técnica",
+          "description": "Desarrollamos nuestras herramientas con los más altos estándares de calidad técnica, garantizando rendimiento, seguridad y confiabilidad en todas las funcionalidades.",
+          "icon": "Award"
+        }
+      ]
     }
   },
   "contactPage": {

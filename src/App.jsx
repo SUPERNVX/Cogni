@@ -23,6 +23,9 @@ const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
+const MissionPage = lazy(() => import('./pages/MissionPage'));
+const VisionPage = lazy(() => import('./pages/VisionPage'));
+const ValuesPage = lazy(() => import('./pages/ValuesPage'));
 
 // Componente de Header reutilizável - ATUALIZADO
 const Header = () => {
@@ -147,6 +150,9 @@ const App = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/mission" element={<MissionPage />} />
+          <Route path="/vision" element={<VisionPage />} />
+          <Route path="/values" element={<ValuesPage />} />
           {/* Rota de fallback para a home */}
           <Route path="*" element={<HomePage />} />
         </Route>

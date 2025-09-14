@@ -109,6 +109,23 @@
   text-shadow: 0 0 8px var(--purple-glow);
 }
 
+.card__action--button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 0;
+  text-align: left;
+  width: auto;
+}
+
+.card__action--button:hover {
+  color: var(--white);
+  text-shadow: 0 0 8px var(--purple-glow);
+  transform: translateX(5px);
+}
+
 .card__image {
   margin: 1em 0;
   border-radius: 12px;

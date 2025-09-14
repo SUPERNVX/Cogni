@@ -10,7 +10,8 @@ const LanguageSelector = () => {
   const languages = [
     { code: 'pt', name: t('languageSelector.pt'), flag: '🇧🇷' },
     { code: 'en', name: t('languageSelector.en'), flag: '🇺🇸' },
-    { code: 'es', name: t('languageSelector.es'), flag: '🇪🇸' }
+    { code: 'es', name: t('languageSelector.es'), flag: '🇪🇸' },
+    { code: 'ru', name: t('languageSelector.ru'), flag: '🇷🇺' }
   ];
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];

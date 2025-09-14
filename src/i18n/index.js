@@ -6,11 +6,13 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import pt from './locales/pt.json';
 import en from './locales/en.json';
 import es from './locales/es.json';
+import ru from './locales/ru.json';
 
 const resources = {
   pt: { translation: pt },
   en: { translation: en },
-  es: { translation: es }
+  es: { translation: es },
+  ru: { translation: ru }
 };
 
 i18n
@@ -33,13 +35,13 @@ i18n
     },
 
     // Configuração de idiomas suportados
-    supportedLngs: ['pt', 'en', 'es'],
+    supportedLngs: ['pt', 'en', 'es', 'ru'],
     
     // Mapeamento de códigos de idioma
-    load: 'languageOnly', // pt-BR -> pt, en-US -> en, es-ES -> es
+    load: 'languageOnly', // pt-BR -> pt, en-US -> en, es-ES -> es, ru-RU -> ru
     
     // Configuração personalizada para detecção
-    whitelist: ['pt', 'en', 'es']
+    whitelist: ['pt', 'en', 'es', 'ru']
   });
 
 export default i18n;

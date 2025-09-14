@@ -42,7 +42,8 @@
     "ariaLabel": "Selecionar idioma",
     "pt": "Português",
     "en": "Inglês",
-    "es": "Espanhol"
+    "es": "Espanhol",
+    "ru": "Russo"
   },
   "magicBento": {
     "card1": {
@@ -52,10 +53,10 @@
       "action": "Saiba Mais sobre a Metodologia →"
     },
     "card2": {
-      "title": "Foco na Produtividade",
-      "description": "Alunos que definem metas claras e tangíveis têm 42% mais chances de alcançá-las. Gradus, nossa calculadora de notas, é a sua primeira etapa para um plano de estudos eficaz.",
-      "label": "Planejamento",
-      "action": "Entenda a Importância da Meta →"
+      "title": "Análise Completa",
+      "description": "De gramática a coesão textual, o Scribo oferece uma análise completa. Receba sugestões claras para cada parágrafo e prepare-se para o sucesso.",
+      "label": "Análise Detalhada",
+      "action": "Veja um Exemplo →"
     },
     "card3": {
       "title": "Scribo: Seu Assistente de Escrita IA",
@@ -70,10 +71,10 @@
       "action": "Calcule Suas Metas Agora →"
     },
     "card5": {
-      "title": "Análise Completa",
-      "description": "De gramática a coesão textual, o Scribo oferece uma análise completa. Receba sugestões claras para cada parágrafo e prepare-se para o sucesso.",
-      "label": "Análise Detalhada",
-      "action": "Veja um Exemplo →"
+      "title": "Foco na Produtividade",
+      "description": "Alunos que definem metas claras e tangíveis têm 42% mais chances de alcançá-las. Gradus, nossa calculadora de notas, é a sua primeira etapa para um plano de estudos eficaz.",
+      "label": "Planejamento",
+      "action": "Entenda a Importância da Meta →"
     },
     "card6": {
       "title": "Simule Cenários",
@@ -99,10 +100,10 @@
       "support": "Suporte Disponível"
     },
     "values": {
-      "title": "Nossos Valores",
-      "results": "Resultados Reais",
-      "accessibility": "Acessibilidade",
-      "innovation": "Inovação Constante"
+      "title": "Quem somos?",
+      "results": "Nossa Missão",
+      "accessibility": "Nossa Visão",
+      "innovation": "Nossos Valores"
     },
     "differentials": {
       "title": "Por que somos diferentes",
@@ -126,6 +127,81 @@
     "technology": {
       "title": "Tecnologia Avançada",
       "description": "Utilizamos as mais recentes tecnologias de IA para criar uma experiência de aprendizado única e personalizada."
+    },
+    "missionPage": {
+      "title": "Nossa Missão",
+      "subtitle": "Transformar a educação através da inteligência artificial",
+      "content": "Nossa missão é democratizar o acesso a uma educação de qualidade, utilizando inteligência artificial para oferecer feedback personalizado e orientação acadêmica precisa. Acreditamos que cada estudante merece ter as melhores ferramentas para alcançar seu potencial máximo.",
+      "values": [
+        {
+          "title": "Excelência Acadêmica",
+          "description": "Buscamos constantemente a melhoria contínua dos nossos algoritmos para oferecer o feedback mais preciso e útil possível."
+        },
+        {
+          "title": "Acessibilidade Universal",
+          "description": "Desenvolvemos ferramentas que podem ser utilizadas por todos, independentemente de suas limitações ou recursos disponíveis."
+        },
+        {
+          "title": "Transparência",
+          "description": "Mantemos nossos usuários informados sobre como nossa tecnologia funciona e como utilizamos seus dados."
+        }
+      ]
+    },
+    "visionPage": {
+      "title": "Nossa Visão",
+      "subtitle": "Um futuro onde a tecnologia potencializa o aprendizado humano",
+      "content": "Visualizamos um mundo onde a inteligência artificial trabalha em harmonia com a criatividade humana, criando um ambiente de aprendizado personalizado e eficaz. Nossa visão é ser a ponte entre a tecnologia avançada e o desenvolvimento educacional, tornando o sucesso acadêmico acessível a todos.",
+      "goals": [
+        {
+          "title": "Personalização Completa",
+          "description": "Desenvolver sistemas que se adaptam completamente ao estilo de aprendizado único de cada estudante."
+        },
+        {
+          "title": "Impacto Global",
+          "description": "Expandir nossa tecnologia para alcançar estudantes em todo o mundo, quebrando barreiras geográficas e socioeconômicas."
+        },
+        {
+          "title": "Inovação Contínua",
+          "description": "Manter-nos na vanguarda da tecnologia educacional, sempre explorando novas possibilidades."
+        }
+      ]
+    },
+    "valuesPage": {
+      "title": "Nossos Valores",
+      "subtitle": "Os princípios que guiam cada decisão que tomamos",
+      "content": "Nossos valores são a base de tudo o que fazemos. Eles orientam nosso desenvolvimento de produtos, nossas interações com usuários e nossa visão de futuro. Cada funcionalidade é criada com estes princípios em mente.",
+      "coreValues": [
+        {
+          "title": "Resultados Reais",
+          "description": "Focamos em criar impacto mensurável na vida acadêmica dos estudantes. Cada recurso é desenvolvido com o objetivo de gerar melhorias concretas no desempenho.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Acessibilidade",
+          "description": "Acreditamos que educação de qualidade deve ser acessível a todos. Desenvolvemos ferramentas inclusivas que atendem diferentes necessidades e contextos.",
+          "icon": "Users"
+        },
+        {
+          "title": "Inovação Constante",
+          "description": "Estamos sempre explorando novas tecnologias e metodologias para melhorar a experiência educacional. A inovação é parte do nosso DNA.",
+          "icon": "Zap"
+        },
+        {
+          "title": "Ética e Privacidade",
+          "description": "Respeitamos a privacidade dos nossos usuários e operamos com total transparência sobre como utilizamos os dados educacionais.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Colaboração",
+          "description": "Valorizamos o feedback da comunidade educacional e trabalhamos em conjunto com professores e estudantes para criar soluções mais eficazes.",
+          "icon": "Heart"
+        },
+        {
+          "title": "Excelência Técnica",
+          "description": "Desenvolvemos nossas ferramentas com os mais altos padrões de qualidade técnica, garantindo performance, segurança e confiabilidade em todas as funcionalidades.",
+          "icon": "Award"
+        }
+      ]
     }
   },
   "contactPage": {

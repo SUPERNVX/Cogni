@@ -42,7 +42,8 @@
     "ariaLabel": "Select language",
     "pt": "Portuguese",
     "en": "English",
-    "es": "Spanish"
+    "es": "Spanish",
+    "ru": "Russian"
   },
   "magicBento": {
     "card1": {
@@ -126,6 +127,81 @@
     "technology": {
       "title": "Advanced Technology",
       "description": "We use the latest AI technologies to create a unique and personalized learning experience."
+    },
+    "missionPage": {
+      "title": "Our Mission",
+      "subtitle": "Transforming education through artificial intelligence",
+      "content": "Our mission is to democratize access to quality education, using artificial intelligence to offer personalized feedback and precise academic guidance. We believe that every student deserves to have the best tools to reach their maximum potential.",
+      "values": [
+        {
+          "title": "Academic Excellence",
+          "description": "We constantly seek continuous improvement of our algorithms to offer the most accurate and useful feedback possible."
+        },
+        {
+          "title": "Universal Accessibility",
+          "description": "We develop tools that can be used by everyone, regardless of their limitations or available resources."
+        },
+        {
+          "title": "Transparency",
+          "description": "We keep our users informed about how our technology works and how we use their data."
+        }
+      ]
+    },
+    "visionPage": {
+      "title": "Our Vision",
+      "subtitle": "A future where technology enhances human learning",
+      "content": "We envision a world where artificial intelligence works in harmony with human creativity, creating a personalized and effective learning environment. Our vision is to be the bridge between advanced technology and educational development, making academic success accessible to all.",
+      "goals": [
+        {
+          "title": "Complete Personalization",
+          "description": "Develop systems that fully adapt to each student's unique learning style."
+        },
+        {
+          "title": "Global Impact",
+          "description": "Expand our technology to reach students worldwide, breaking down geographical and socioeconomic barriers."
+        },
+        {
+          "title": "Continuous Innovation",
+          "description": "Stay at the forefront of educational technology, always exploring new possibilities."
+        }
+      ]
+    },
+    "valuesPage": {
+      "title": "Our Values",
+      "subtitle": "The principles that guide every decision we make",
+      "content": "Our values are the foundation of everything we do. They guide our product development, our interactions with users, and our vision for the future. Every feature is created with these principles in mind.",
+      "coreValues": [
+        {
+          "title": "Real Results",
+          "description": "We focus on creating measurable impact in students' academic lives. Each feature is developed with the goal of generating concrete performance improvements.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Accessibility",
+          "description": "We believe that quality education should be accessible to everyone. We develop inclusive tools that meet different needs and contexts.",
+          "icon": "Users"
+        },
+        {
+          "title": "Constant Innovation",
+          "description": "We are always exploring new technologies and methodologies to improve the educational experience. Innovation is part of our DNA.",
+          "icon": "Zap"
+        },
+        {
+          "title": "Ethics and Privacy",
+          "description": "We respect our users' privacy and operate with complete transparency about how we use educational data.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Collaboration",
+          "description": "We value feedback from the educational community and work together with teachers and students to create more effective solutions.",
+          "icon": "Heart"
+        },
+        {
+          "title": "Technical Excellence",
+          "description": "We develop our tools with the highest technical quality standards, ensuring performance, security, and reliability in all functionalities.",
+          "icon": "Award"
+        }
+      ]
     }
   },
   "contactPage": {

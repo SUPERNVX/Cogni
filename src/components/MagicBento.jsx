@@ -17,7 +17,8 @@ const getCardData = (t) => [
     description: t("magicBento.card1.description"),
     label: t("magicBento.card1.label"),
     action: t("magicBento.card1.action"),
-    link: "#scribo"
+    link: "https://doi.org/10.3102/003465430298487",
+    externalLink: true
   },
   {
     color: "#060010",
@@ -42,7 +43,8 @@ const getCardData = (t) => [
     description: t("magicBento.card4.description"),
     label: t("magicBento.card4.label"),
     action: t("magicBento.card4.action"),
-    link: "#gradus",
+    link: "https://supernvx.github.io/Calculadora-de-notas/",
+    externalLink: true,
     hasImage: true,
     image: calculadoraImage
   },
@@ -52,7 +54,8 @@ const getCardData = (t) => [
     description: t("magicBento.card5.description"),
     label: t("magicBento.card5.label"),
     action: t("magicBento.card5.action"),
-    link: "#scribo"
+    link: "https://doi.org/10.1037/0003-066X.57.9.705",
+    externalLink: true
   },
   {
     color: "#060010",
@@ -324,7 +327,16 @@ const MagicBento = ({
                   <h2 className="card__title">{card.title}</h2>
                   <p className="card__description">{card.description}</p>
                   {card.hasImage && card.image && <div className="card__image"><img src={card.image} alt={card.title} /></div>}
-                  <a href={card.link} className="card__action">{card.action}</a>
+                  {card.externalLink ? (
+                    <button 
+                      onClick={() => window.open(card.link, '_blank', 'noopener,noreferrer')}
+                      className="card__action card__action--button"
+                    >
+                      {card.action}
+                    </button>
+                  ) : (
+                    <a href={card.link} className="card__action">{card.action}</a>
+                  )}
                 </div>
               </MemoizedParticleCard>
             );
@@ -337,7 +349,16 @@ const MagicBento = ({
                 <h2 className="card__title">{card.title}</h2>
                 <p className="card__description">{card.description}</p>
                 {card.hasImage && card.image && <div className="card__image"><img src={card.image} alt={card.title} /></div>}
-                <a href={card.link} className="card__action">{card.action}</a>
+                {card.externalLink ? (
+                  <button 
+                    onClick={() => window.open(card.link, '_blank', 'noopener,noreferrer')}
+                    className="card__action card__action--button"
+                  >
+                    {card.action}
+                  </button>
+                ) : (
+                  <a href={card.link} className="card__action">{card.action}</a>
+                )}
               </div>
             </div>
           );

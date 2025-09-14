@@ -85,9 +85,7 @@
 /* Mobile responsivo */
 @media (max-width: 768px) {
   .language-selector {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
+    position: relative;
     z-index: 1001;
   }
 
