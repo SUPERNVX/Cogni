@@ -169,22 +169,32 @@
     grid-template-columns: 1fr;
     width: 90%;
     margin: 0 auto;
-    padding: 1em;
-    column-gap: 2em;
-    row-gap: 0.5em;
+    padding: 0.8em;
+    column-gap: 1.5em;
+    row-gap: 0.4em;
   }
 
   .card {
     width: 100%;
-    min-height: 180px;
+    min-height: 160px;
+    aspect-ratio: auto;
   }
 
   .card__title {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .card__description {
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .card__action {
+    font-size: 12px;
+  }
+
+  .card__label {
+    font-size: 12px;
   }
 }
 

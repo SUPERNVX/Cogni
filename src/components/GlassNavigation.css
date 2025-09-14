@@ -126,6 +126,11 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .glass-nav-container {
+    width: 95%;
+    max-width: 350px;
+  }
+  
   .glass-nav-bottom {
     bottom: 10px;
   }
@@ -135,22 +140,25 @@
   }
   
   .glass-nav-content {
-    padding: 0 10px;
-    gap: 8px;
+    padding: 0 8px;
+    gap: 4px;
   }
   
   .glass-nav-items {
-    gap: 8px;
+    gap: 4px;
+    width: 100%;
+    justify-content: space-around;
   }
   
   .glass-nav-button,
   .glass-profile-button {
-    min-width: 50px;
-    padding: 6px 10px;
+    min-width: 60px;
+    padding: 8px 6px;
+    flex: 1;
   }
   
   .glass-nav-text {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 

@@ -30,7 +30,7 @@ body {
     line-height: 1.6;
 }
 
-/* Previne movimento horizontal em mobile */
+/* Previne movimento horizontal em mobile e otimiza performance */
 @media (max-width: 768px) {
   body, html {
     overflow-x: hidden !important;
@@ -44,10 +44,11 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
+    will-change: auto;
   }
   
   .main-content-wrapper {
-    padding: 0 !important; /* Remove padding que empurra para direita */
+    padding: 0 !important;
     margin: 0;
     width: 100vw;
   }
@@ -57,6 +58,16 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
+  }
+
+  /* Otimizações de performance para mobile */
+  * {
+    will-change: auto;
+  }
+  
+  .card {
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 }
 

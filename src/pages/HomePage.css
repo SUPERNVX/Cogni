@@ -375,7 +375,7 @@
   /* WIDGET PRINCIPAL - Centralização perfeita */
   .glass-widget-section {
     height: auto;
-    margin-top: 30vh; /* Reduzido ainda mais para aparecer mais cedo */
+    margin-top: 15vh; /* Muito reduzido para aparecer mais cedo */
     padding: 1rem 0;
   }
   
@@ -520,7 +520,7 @@
   
   /* WIDGET PRINCIPAL */
   .glass-widget-section {
-    margin-top: 25vh; /* Aparece ainda mais cedo */
+    margin-top: 10vh; /* Aparece muito mais cedo */
   }
   
   .glass-widget-main {
