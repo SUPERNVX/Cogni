@@ -99,7 +99,7 @@ const updateCardGlowProperties = (card, mouseX, mouseY, glow, radius) => {
 const ParticleCard = ({
   children, className = "", disableAnimations = false, style,
   particleCount = DEFAULT_PARTICLE_COUNT, glowColor = DEFAULT_GLOW_COLOR,
-  enableTilt = true, clickEffect = false, enableMagnetism = false,
+  enableTilt = true, clickEffect = false, enableMagnetism = false, onClick,
 }) => {
   const cardRef = useRef(null);
   const particlesRef = useRef([]);
@@ -182,6 +182,9 @@ const ParticleCard = ({
     };
 
     const handleClick = (e) => {
+      // Chama o onClick personalizado se fornecido
+      if (onClick) onClick(e);
+      
       if (!clickEffect) return;
       const rect = element.getBoundingClientRect();
       const x = e.clientX - rect.left, y = e.clientY - rect.top;
@@ -302,26 +305,57 @@ const MagicBento = ({
   const gridRef = useRef(null);
   const isMobile = useMobileDetection();
   const shouldDisableAnimations = disableAnimations || isMobile;
+  
+  // Configurações otimizadas para mobile
+  const mobileOptimizedSettings = {
+    enableStars: isMobile ? false : enableStars,
+    enableSpotlight: isMobile ? false : enableSpotlight,
+    enableTilt: isMobile ? false : enableTilt,
+    enableMagnetism: isMobile ? false : enableMagnetism,
+    clickEffect: isMobile ? false : clickEffect,
+    particleCount: isMobile ? 0 : particleCount,
+    spotlightRadius: isMobile ? 0 : spotlightRadius
+  };
+  
   const { t } = useTranslation();
   const cardData = getCardData(t);
 
   return (
     <>
-      {enableSpotlight && (
+      {mobileOptimizedSettings.enableSpotlight && (
         <GlobalSpotlight
           gridRef={gridRef}
           disableAnimations={shouldDisableAnimations}
-          enabled={enableSpotlight}
-          spotlightRadius={spotlightRadius}
+          enabled={mobileOptimizedSettings.enableSpotlight}
+          spotlightRadius={mobileOptimizedSettings.spotlightRadius}
           glowColor={glowColor}
         />
       )}
       <BentoCardGrid gridRef={gridRef}>
         {cardData.map((card, index) => {
-          const cardProps = { className: `card ${textAutoHide ? "card--text-autohide" : ""} ${enableBorderGlow ? "card--border-glow" : ""}`, style: { backgroundColor: card.color, "--glow-color": glowColor } };
-          if (enableStars) {
+          const cardProps = { 
+            className: `card ${textAutoHide ? "card--text-autohide" : ""} ${enableBorderGlow ? "card--border-glow" : ""}`, 
+            style: { backgroundColor: card.color, "--glow-color": glowColor } 
+          };
+          if (mobileOptimizedSettings.enableStars) {
             return (
-              <MemoizedParticleCard key={index} {...cardProps} disableAnimations={shouldDisableAnimations} particleCount={particleCount} glowColor={glowColor} enableTilt={enableTilt} clickEffect={clickEffect} enableMagnetism={enableMagnetism}>
+              <MemoizedParticleCard 
+                key={index} 
+                {...cardProps} 
+                disableAnimations={shouldDisableAnimations} 
+                particleCount={mobileOptimizedSettings.particleCount} 
+                glowColor={glowColor} 
+                enableTilt={mobileOptimizedSettings.enableTilt} 
+                clickEffect={mobileOptimizedSettings.clickEffect} 
+                enableMagnetism={mobileOptimizedSettings.enableMagnetism}
+                onClick={(e) => {
+                  if (isMobile) {
+                    const card = e.currentTarget;
+                    card.classList.add('card--active');
+                    setTimeout(() => card.classList.remove('card--active'), 300);
+                  }
+                }}
+              >
                 <div className="card__header"><div className="card__label">{card.label}</div></div>
                 <div className="card__content">
                   <h2 className="card__title">{card.title}</h2>
@@ -343,7 +377,17 @@ const MagicBento = ({
           }
           // Fallback para cards sem estrelas (não utilizado no momento, mas mantido para consistência)
           return (
-            <div key={index} {...cardProps}>
+            <div 
+              key={index} 
+              {...cardProps}
+              onClick={(e) => {
+                if (isMobile) {
+                  const card = e.currentTarget;
+                  card.classList.add('card--active');
+                  setTimeout(() => card.classList.remove('card--active'), 300);
+                }
+              }}
+            >
               <div className="card__header"><div className="card__label">{card.label}</div></div>
               <div className="card__content">
                 <h2 className="card__title">{card.title}</h2>

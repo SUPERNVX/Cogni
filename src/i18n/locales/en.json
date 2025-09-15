@@ -97,6 +97,7 @@
     "stats": {
       "students": "Students Helped",
       "improvement": "Grade Improvement",
+      "improvementValue": "up to 50%",
       "support": "Support Available"
     },
     "values": {

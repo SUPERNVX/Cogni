@@ -168,7 +168,7 @@ const AboutPage = () => {
             </div>
             <div className="stat-item">
               <div className="stat-number">
-                até 50%
+                {t('aboutPage.stats.improvementValue')}
               </div>
               <div className="stat-label">{t('aboutPage.stats.improvement')}</div>
             </div>

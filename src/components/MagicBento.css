@@ -244,7 +244,7 @@
   }
 }
 
-/* Border glow effect */
+/* Border glow effect - Desktop (hover) + Mobile (touch/click) */
 .card--border-glow::after {
   content: '';
   position: absolute;
@@ -262,14 +262,33 @@
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 1;
+  opacity: 0;
 }
 
-.card--border-glow:hover::after {
-  opacity: 1;
+/* Desktop: Hover ativa o glow */
+@media (min-width: 769px) {
+  .card--border-glow:hover::after {
+    opacity: 1;
+  }
+
+  .card--border-glow:hover {
+    box-shadow: 0 4px 20px rgba(46, 24, 78, 0.4), 0 0 30px var(--purple-glow);
+  }
 }
 
-.card--border-glow:hover {
-  box-shadow: 0 4px 20px rgba(46, 24, 78, 0.4), 0 0 30px var(--purple-glow);
+/* Mobile: Touch/Click ativa o glow */
+@media (max-width: 768px) {
+  .card--border-glow.card--active::after {
+    opacity: 1;
+  }
+
+  .card--border-glow.card--active {
+    box-shadow: 0 4px 20px rgba(46, 24, 78, 0.4), 0 0 30px var(--purple-glow);
+  }
+  
+  .card--border-glow:active::after {
+    opacity: 1;
+  }
 }
 
 .particle-container {
@@ -289,16 +308,21 @@
   z-index: -1;
 }
 
-.particle-container:hover {
-  box-shadow: 0 4px 20px rgba(46, 24, 78, 0.2), 0 0 30px var(--purple-glow);
+/* Particle container hover - Desabilitado no mobile */
+@media (min-width: 769px) {
+  .particle-container:hover {
+    box-shadow: 0 4px 20px rgba(46, 24, 78, 0.2), 0 0 30px var(--purple-glow);
+  }
 }
 
-/* Global spotlight styles */
-.global-spotlight {
-  mix-blend-mode: screen;
-  will-change: transform, opacity;
-  z-index: 200 !important;
-  pointer-events: none;
+/* Global spotlight styles - Desabilitado no mobile */
+@media (min-width: 769px) {
+  .global-spotlight {
+    mix-blend-mode: screen;
+    will-change: transform, opacity;
+    z-index: 200 !important;
+    pointer-events: none;
+  }
 }
 
 .bento-section {
@@ -308,6 +332,24 @@
 
 /* === MOBILE RESPONSIVO MAGICBENTO === */
 @media (max-width: 768px) {
+  /* Desabilita animações pesadas no mobile */
+  .card {
+    will-change: auto !important;
+    transform: none !important;
+  }
+  
+  .card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Desabilita partículas e efeitos */
+  .particle,
+  .particle::before,
+  .global-spotlight {
+    display: none !important;
+  }
+  
   .magic-bento-container {
     width: 100vw;
     padding: 2rem 0;
