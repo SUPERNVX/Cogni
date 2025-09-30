@@ -226,9 +226,9 @@
     "info": {
       "title": "Contact Information",
       "email": "Email",
-      "emailValue": "contact@cogni-ia.com",
-      "chat": "Chat",
-      "chatValue": "Available on the website",
+      "emailValue": "cogniia@gmail.com",
+      "instagram": "Instagram",
+      "instagramValue": "Get in touch",
       "location": "Location",
       "locationValue": "Brazil"
     },
@@ -244,11 +244,11 @@
     "faq": {
       "title": "Frequently Asked Questions",
       "q1": "How long does it take to get a response?",
-      "a1": "We respond within 24 hours on business days. For urgent matters, use our chat.",
+      "a1": "We respond within 24 hours on business days. For urgent matters, get in touch with us.",
       "q2": "Can I suggest new features?",
       "a2": "Yes! We love user feedback. Your suggestions help us improve constantly.",
       "q3": "Is technical support available?",
-      "a3": "We offer full support via email and chat. Our team is ready to help."
+      "a3": "We offer full support via email. Our team is ready to help."
     }
   },
   "common": {

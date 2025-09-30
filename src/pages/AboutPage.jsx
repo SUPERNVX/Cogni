@@ -56,7 +56,7 @@ const AboutCard = ({ children, className = "", delay = 0, size = "normal" }) => 
         opacity: 1, 
         y: 0,
         scale: 1,
-        duration: 0.8,
+        duration: 0.4,
         delay: delay,
         ease: "power3.out"
       }

@@ -2,6 +2,7 @@ import { useRef, useEffect, useCallback, useState, memo } from "react";
 import { gsap } from "gsap";
 import "./MagicBento.css";
 import calculadoraImage from "../assets/Calculadora de notas.png";
+import scriboImage from "../assets/scribo.webp";
 import { useTranslation } from "react-i18next";
 
 // --- DADOS E CONSTANTES (MOVIMENTEI PARA CIMA PARA MELHOR ORGANIZAÇÃO) ---
@@ -35,7 +36,8 @@ const getCardData = (t) => [
     label: t("magicBento.card3.label"),
     action: t("magicBento.card3.action"),
     link: "#scribo",
-    hasImage: false
+    hasImage: true,
+    image: scriboImage
   },
   {
     color: "#060010",

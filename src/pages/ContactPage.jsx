@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { Mail, MessageCircle, Clock, HelpCircle, Send, Phone, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
+import { Mail, MessageCircle, Clock, HelpCircle, Send, Phone, MapPin, ChevronDown, ChevronUp, Heart } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 // Estado global para controlar se já animou na primeira visita
@@ -121,6 +121,74 @@ const ContactCard = ({ children, className = "", delay = 0, size = "normal" }) =
   );
 };
 
+// Componente de Select Customizado
+const CustomSelect = ({ id, name, value, onChange, options, className = "", required = false }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const selectRef = useRef(null);
+
+  const selectedOption = options.find(option => option.value === value) || { label: options[0]?.label || "" };
+
+  const handleSelect = (option) => {
+    onChange({
+      target: {
+        name: name,
+        value: option.value
+      }
+    });
+    setIsOpen(false);
+  };
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (selectRef.current && !selectRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div className={`custom-select ${className}`} ref={selectRef}>
+      <div 
+        className={`form-input custom-select-trigger ${isOpen ? 'active' : ''}`}
+        onClick={handleToggle}
+      >
+        <span className="custom-select-value">{selectedOption.label}</span>
+        <ChevronDown 
+          size={16} 
+          className={`custom-select-arrow ${isOpen ? 'open' : ''}`}
+          style={{ 
+            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', 
+            transition: 'transform 0.3s ease' 
+          }}
+        />
+      </div>
+      
+      {isOpen && (
+        <div className="custom-select-dropdown">
+          {options.filter(option => option.value !== "").map((option, index) => (
+            <div
+              key={index}
+              className={`custom-select-option ${value === option.value ? 'selected' : ''}`}
+              onClick={() => handleSelect(option)}
+            >
+              {option.label}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 // Componente FAQ com expansão
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
@@ -231,21 +299,20 @@ const ContactPage = () => {
               
               <div className="form-group">
                 <label htmlFor="category" className="form-label">{t('contactPage.form.category')}</label>
-                <select
+                <CustomSelect
                   id="category"
                   name="category"
                   value={formData.category}
                   onChange={handleInputChange}
-                  className="form-input"
-                  required
-                >
-                  <option value="">{t('contactPage.form.selectCategory')}</option>
-                  <option value="suporte">{t('contactPage.form.support')}</option>
-                  <option value="sugestao">{t('contactPage.form.suggestion')}</option>
-                  <option value="bug">{t('contactPage.form.bug')}</option>
-                  <option value="parceria">{t('contactPage.form.partnership')}</option>
-                  <option value="outros">{t('contactPage.form.other')}</option>
-                </select>
+                  options={[
+                    { value: "", label: t('contactPage.form.selectCategory') },
+                    { value: "suporte", label: t('contactPage.form.support') },
+                    { value: "sugestao", label: t('contactPage.form.suggestion') },
+                    { value: "bug", label: t('contactPage.form.bug') },
+                    { value: "parceria", label: t('contactPage.form.partnership') },
+                    { value: "outros", label: t('contactPage.form.other') }
+                  ]}
+                />
               </div>
               
               <div className="form-group">
@@ -290,13 +357,13 @@ const ContactPage = () => {
                   <span className="info-value">{t('contactPage.info.emailValue')}</span>
                 </div>
               </div>
-              <div className="contact-info-item">
-                <MessageCircle size={16} />
+              <a href="https://www.instagram.com/cogni_ia?igsh=MTkwOGZlaGUyYnVkbA==" target="_blank" rel="noopener noreferrer" className="contact-info-item">
+                <Heart size={16} />
                 <div>
-                  <span className="info-label">{t('contactPage.info.chat')}</span>
-                  <span className="info-value">{t('contactPage.info.chatValue')}</span>
+                  <span className="info-label">{t('contactPage.info.instagram')}</span>
+                  <span className="info-value">{t('contactPage.info.instagramValue')}</span>
                 </div>
-              </div>
+              </a>
               <div className="contact-info-item">
                 <MapPin size={16} />
                 <div>

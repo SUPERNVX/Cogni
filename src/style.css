@@ -1228,6 +1228,107 @@ body {
     color: var(--color-text-secondary);
 }
 
+/* Custom select element styling */
+select.form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239CA3AF' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 1rem center;
+    background-repeat: no-repeat;
+    background-size: 1.2em;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+
+select.form-input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%238B5CF6' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+/* Custom select dropdown styling */
+.custom-select {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.custom-select-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: rgba(15, 15, 26, 0.5);
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    box-sizing: border-box;
+    min-height: 2.25rem;
+}
+
+.custom-select-trigger:hover,
+.custom-select-trigger.active {
+    background: rgba(15, 15, 26, 0.8);
+    border-color: var(--color-accent1);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.custom-select-value {
+    flex: 1;
+    text-align: left;
+    color: var(--color-text-primary);
+}
+
+.custom-select-arrow {
+    transition: transform 0.3s ease;
+    color: var(--color-text-secondary);
+}
+
+.custom-select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-widget-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    overflow: hidden;
+    z-index: 100;
+    margin-top: 0.25rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.custom-select-option {
+    padding: 0.75rem 1rem;
+    background: transparent;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-select-option:last-child {
+    border-bottom: none;
+}
+
+.custom-select-option:hover {
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--color-accent1);
+}
+
+.custom-select-option.selected {
+    background: rgba(139, 92, 246, 0.2);
+    color: var(--color-accent1);
+    font-weight: 500;
+}
+
+/* Smooth open/close animations would require additional JS with height transitions */
+
 /* Botão de envio */
 .contact-submit-btn {
     display: flex;

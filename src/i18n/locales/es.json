@@ -226,9 +226,9 @@
     "info": {
       "title": "Información de Contacto",
       "email": "Correo Electrónico",
-      "emailValue": "contacto@cogni-ia.com",
-      "chat": "Chat",
-      "chatValue": "Disponible en el sitio web",
+      "emailValue": "cogniia@gmail.com",
+      "instagram": "Instagram",
+      "instagramValue": "Contáctenos",
       "location": "Ubicación",
       "locationValue": "Brasil"
     },
@@ -244,11 +244,11 @@
     "faq": {
       "title": "Preguntas Frecuentes",
       "q1": "¿Cuánto tiempo se tarda en recibir una respuesta?",
-      "a1": "Respondemos en un plazo de 24 horas en días laborables. Para asuntos urgentes, utiliza nuestro chat.",
+      "a1": "Respondemos en un plazo de 24 horas en días laborables. Para asuntos urgentes, contáctenos.",
       "q2": "¿Puedo sugerir nuevas funcionalidades?",
       "a2": "¡Sí! Nos encantan los comentarios de los usuarios. Tus sugerencias nos ayudan a mejorar constantemente.",
       "q3": "¿Hay soporte técnico disponible?",
-      "a3": "Ofrecemos soporte completo por correo electrónico y chat. Nuestro equipo está listo para ayudar."
+      "a3": "Ofrecemos soporte completo por correo electrónico. Nuestro equipo está listo para ayudar."
     }
   },
   "common": {
